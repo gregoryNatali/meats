@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="screens/logo.png" type="image/x-icon">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastre-se</h1>
+    <a href="loginscreen.html" id="back">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 5L9 10L14 15L13 17L6 10L13 3L14 5Z" fill="black"/>
+        </svg>
+    </a>
+    <form class="input-wrapper" action="cadastro.php" method="post">
+        <div>
+            <label for="email-input">Insira seu E-mail</label>
+            <input id="email-input" name="email" required placeholder="nome@exemplo.com">
+        </div>
+        <div>
+            <label for="name-input">Insira seu nome</label>
+            <input id="name-input" name="nome" required placeholder="Nome">
+        </div>
+        <div>
+            <label for="last-name-input">Insira seu sobrenome</label>
+            <input id="surname-input" name="sobrenome" required placeholder="Sobrenome">
+        </div>
+        <div>
+            <label for="cpf-input">Insira seu CPF</label>
+            <input id="cpf-input" name="cpf" type="number" max="99999999999"required placeholder="CPF">
+        </div>
+        <div>
+            <label for="address-input">Insira seu endereço</label>
+            <input id="address-input" name="endereco" required placeholder="Endereço">
+        </div>
+        <div>
+            <label for="phone-input">Insira seu número de telefone</label>
+            <input id="phone-input" name="telefone" type="number" required placeholder="Telefone">
+        </div>
+        <div>
+            <label for="age-input">Insira sua idade</label>
+            <input id="age-input" name="idade" type="number" min="1" max="99" required placeholder="Idade">
+        </div>
+        <div>
+            <label for="password-input">Insira sua senha</label>
+            <input id="password-input" name="senha" type="password" required placeholder="Senha">
+        </div>
+        <div>
+            <label for="verify-password-input">Confirme sua senha</label>
+            <input id="verify-password-input" name="verificarSenha" type="password" required placeholder="Confirme sua senha">
+        </div>
+        <button id="register-button" type="submit">Cadastrar</button>
+        <small id="form-text"></small>
+    </form>
+    <script src="register.js"></script>
+</body>
+</html>
