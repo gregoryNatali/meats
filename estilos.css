@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -62,9 +62,10 @@ input:focus {
 #form-text {
     margin-top: 10px;
     color: rgb(59, 59, 59);
+    text-align: center;
 }
 
-#register-button, #login-button {
+button {
     margin-top: 7px;
     width: 150px;
     height: 35px;
@@ -77,7 +78,7 @@ input:focus {
     outline: none;
 }
 
-#register-button:active, #login-button:active {
+button:active {
     background-color: rgb(206, 0, 0);
 }
 
@@ -90,7 +91,7 @@ input:focus {
         right: 40vw;
     }
 
-    #register-button, #login-button {
-        width: 50%;
+    button {
+        width: 50vw;
     }
 }
