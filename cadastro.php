@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="screens/logo.png" type="image/x-icon">
     <style>
         h1 {
-            font-size: 15pt;
-            margin: 30px 10px 20px 10px;
+            font-size: 14pt;
+            margin: 30px 30px 60px 30px;
             font-weight: 400;
         }
         button {
@@ -38,7 +38,7 @@
         $insert = mysqli_query($conn, $sql);
         
         if (!$insert) {
-            echo 'Erro: não foi possível cadastrar o usuário.<br>';
+            echo '<h1>Erro: não foi possível cadastrar o usuário.</h1>';
             die('<a href="cadastro.html"><button>Voltar</button></a>');
         }
         
