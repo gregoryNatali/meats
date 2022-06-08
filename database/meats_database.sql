@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Tempo de geração: 30-Maio-2022 às 03:18
+-- Tempo de geração: 06-Jun-2022 às 13:52
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -32,8 +32,8 @@ CREATE TABLE `cardapio` (
   `nome_produto` varchar(50) NOT NULL,
   `preco_produto` float NOT NULL,
   `descricao_produto` varchar(250) NOT NULL,
-  `categoria_produto` varchar(50) NOT NULL,
   `peso_produto` int(11) NOT NULL,
+  `id_categoria` int(11) NOT NULL,
   `e_destaque` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -41,20 +41,44 @@ CREATE TABLE `cardapio` (
 -- Extraindo dados da tabela `cardapio`
 --
 
-INSERT INTO `cardapio` (`id_cardapio`, `nome_produto`, `preco_produto`, `descricao_produto`, `categoria_produto`, `peso_produto`, `e_destaque`) VALUES
-(1, 'Hambúrguer ', 7.99, 'Pão, hambúrguer e picles com ketchup e mostarda', 'Hambúrgueres Simples', 90, 0),
-(2, 'Hambúrguer Duplo', 12.99, 'Dois pães, dois hambúrgueres, picles e condimentos', 'Hambúrgueres Simples', 150, 0),
-(3, 'Hambúrguer Veggie', 15.99, 'Pão vegano e hambúrguer feito de proteína de soja', 'Hambúrgueres Veganos', 90, 1),
-(4, 'Batata Frita', 5.99, 'Deliciosas batatas selecionadas, fritas e crocantes', 'Porções ', 400, 0),
-(5, 'Água Mineral', 2.99, 'Água sem gás', 'Bebidas', 500, 0),
-(6, 'Sundae ', 8.99, 'Sorvete de baunilha com cobertura de chocolate ', 'Sobremesa', 200, 0),
-(7, 'Casquinha', 3.99, 'Sorvete de baunilha em uma casquinha crocante', 'Sobremesa', 90, 0),
-(8, 'Hambúrguer com Queijo Triplo', 14.99, 'Um hambúrguer (100% carne bovina), queijo cheddar', 'Hambúrgueres Simples', 200, 0),
-(9, 'Drink de morango', 16.99, 'Vodka, pedras de gelo, leite condensado e morango', 'Drink', 500, 1),
-(10, 'Porção de camarão e fritas', 39.99, '250g de batata e 250g de camarão', 'Porções', 500, 1),
-(11, 'Pepsi Lata', 5.99, 'Uma lata de Pepsi ', 'Bebida', 350, 1),
-(12, 'Steak Power com Fritas e Onion Rings', 19.99, 'Hambúrguer gormet acompanhado por batatas e onion rings', 'Hambúrgueres Gourmet', 500, 1),
-(13, 'Chicken Dream', 13.99, 'Hambúrguer de frango  ', 'Hambúrgueres Simples', 400, 1);
+INSERT INTO `cardapio` (`id_cardapio`, `nome_produto`, `preco_produto`, `descricao_produto`, `peso_produto`, `id_categoria`, `e_destaque`) VALUES
+(1, 'Hambúrguer ', 7.99, 'Pão, hambúrguer e picles com ketchup e mostarda', 90, 1, 0),
+(2, 'Hambúrguer Duplo', 12.99, 'Dois pães, dois hambúrgueres, picles e condimentos', 150, 1, 0),
+(3, 'Hambúrguer Veggie', 15.99, 'Pão vegano e hambúrguer feito de proteína de soja', 90, 2, 1),
+(4, 'Batata Frita', 5.99, 'Deliciosas batatas selecionadas, fritas e crocantes', 400, 4, 0),
+(5, 'Água Mineral', 2.99, 'Água sem gás', 500, 6, 0),
+(6, 'Sundae ', 8.99, 'Sorvete de baunilha com cobertura de chocolate ', 200, 5, 0),
+(7, 'Casquinha', 3.99, 'Sorvete de baunilha em uma casquinha crocante', 90, 5, 0),
+(8, 'Hambúrguer com Queijo Triplo', 14.99, 'Um hambúrguer (100% carne bovina), queijo cheddar', 200, 3, 0),
+(9, 'Drink de morango', 16.99, 'Vodka, pedras de gelo, leite condensado e morango', 500, 7, 1),
+(10, 'Porção de camarão e fritas', 39.99, '250g de batata e 250g de camarão', 500, 4, 1),
+(11, 'Pepsi Lata', 5.99, 'Uma lata de Pepsi ', 350, 6, 1),
+(12, 'Steak Power com Fritas e Onion Rings', 19.99, 'Hambúrguer gormet acompanhado por batatas e onion rings', 500, 3, 1),
+(13, 'Chicken Dream', 13.99, 'Hambúrguer de frango  ', 400, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `categoria`
+--
+
+CREATE TABLE `categoria` (
+  `id_categoria` int(11) NOT NULL,
+  `nome_categoria` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `categoria`
+--
+
+INSERT INTO `categoria` (`id_categoria`, `nome_categoria`) VALUES
+(1, 'Hambúrgueres Simples'),
+(2, 'Hambúrgueres Veganos'),
+(3, 'Hambúrgueres Gourmet'),
+(4, 'Porções'),
+(5, 'Sobremesa'),
+(6, 'Bebidas'),
+(7, 'Drinks');
 
 -- --------------------------------------------------------
 
@@ -119,25 +143,24 @@ CREATE TABLE `usuario` (
   `senha_usuario` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `endereco_usuario` varchar(100) NOT NULL,
   `numero_cartao` int(11) DEFAULT NULL,
-  `telefone_usuario` int(11) NOT NULL,
-  `cpf_usuario` bigint(11) NOT NULL,
-  `idade_usuario` int(11) NOT NULL
+  `cpf_usuario` bigint(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usuario`, `endereco_usuario`, `numero_cartao`, `telefone_usuario`, `cpf_usuario`, `idade_usuario`) VALUES
-(1, 'Ronaldo fenômeno', 'fenomeno.bom@gmail.com', 'ronaldobomdebola', 'Rua Santo Ronaldo', 12344321, 994342146, 884991023, 45),
-(2, 'Edson Arantes do Nascimento ', 'EdsonPele@yahoo.com', 'pelezinho', 'Rua Pele Barbosa', 9844321, 3412436, 6483612, 81),
-(3, 'Scrooge McDuck', 'tiopatinhas@gmail.com', 'dinheiro', 'Disneyland city', 10000000, 13243886, 9867785, 255),
-(4, 'Jotaro Kujo', 'ORAORAORA@outlook.com', 'DIOOO', 'Rua Hirohiko Araki', 990987698, 345672121, 9005002, 17),
-(5, 'Dio Brando', 'MUDAMUDAMUDA@gmail.com', 'Theworld', 'Rua Ronnie James Dio ', 9908876, 9966544, 5563223, 20),
-(6, 'Jonathan Calleri', 'jonathancalleri@gmail.com', '123', 'Avenida Brasil, 123', NULL, 31247214, 28138712321, 28),
-(7, 'Cleiton Martins', 'showdebola@yahoo.com', 'DenilsonShow', 'Rua XV de Novembro, 47', NULL, 34873821, 83271912839, 51),
-(8, 'José Bonifácio', 'bonijose@facio.com', 'senhadaora', 'Rua Netuno, 84', 42398194, 32981931, 82371328152, 69),
-(9, 'João Batatas', 'batatas@email.com', 'abc', 'Rua Florianópolis, 47', NULL, 38219382, 7231873821, 71);
+INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usuario`, `endereco_usuario`, `numero_cartao`, `cpf_usuario`) VALUES
+(1, 'Ronaldo fenômeno', 'fenomeno.bom@gmail.com', 'ronaldobomdebola', 'Rua Santo Ronaldo', 12344321, 884991023),
+(2, 'Edson Arantes do Nascimento ', 'EdsonPele@yahoo.com', 'pelezinho', 'Rua Pele Barbosa', 9844321, 6483612),
+(3, 'Scrooge McDuck', 'tiopatinhas@gmail.com', 'dinheiro', 'Disneyland city', 10000000, 9867785),
+(4, 'Jotaro Kujo', 'ORAORAORA@outlook.com', 'DIOOO', 'Rua Hirohiko Araki', 990987698, 9005002),
+(5, 'Dio Brando', 'MUDAMUDAMUDA@gmail.com', 'Theworld', 'Rua Ronnie James Dio ', 9908876, 5563223),
+(6, 'Jonathan Calleri', 'jonathancalleri@gmail.com', '123', 'Avenida Brasil, 123', NULL, 28138712321),
+(7, 'Cleiton Martins', 'showdebola@yahoo.com', 'DenilsonShow', 'Rua XV de Novembro, 47', NULL, 83271912839),
+(8, 'José Bonifácio', 'bonijose@facio.com', 'senhadaora', 'Rua Netuno, 84', 42398194, 82371328152),
+(9, 'João Batatas', 'batatas@email.com', 'abc', 'Rua Florianópolis, 47', NULL, 7231873821),
+(10, 'André Felipe', 'meuemail@email.com', 'Senha', 'Rua Marte, 429', NULL, 31203921321);
 
 --
 -- Índices para tabelas despejadas
@@ -147,7 +170,14 @@ INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usu
 -- Índices para tabela `cardapio`
 --
 ALTER TABLE `cardapio`
-  ADD PRIMARY KEY (`id_cardapio`);
+  ADD PRIMARY KEY (`id_cardapio`),
+  ADD KEY `pedido_categoria` (`id_categoria`);
+
+--
+-- Índices para tabela `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`id_categoria`);
 
 --
 -- Índices para tabela `entregador`
@@ -181,6 +211,12 @@ ALTER TABLE `cardapio`
   MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT de tabela `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT de tabela `entregador`
 --
 ALTER TABLE `entregador`
@@ -196,11 +232,17 @@ ALTER TABLE `pedido`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restrições para despejos de tabelas
 --
+
+--
+-- Limitadores para a tabela `cardapio`
+--
+ALTER TABLE `cardapio`
+  ADD CONSTRAINT `pedido_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Limitadores para a tabela `pedido`

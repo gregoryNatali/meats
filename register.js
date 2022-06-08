@@ -9,8 +9,6 @@ button.addEventListener('click', (e) => {
         surname: document.querySelector("#surname-input").value,
         cpf: document.querySelector("#cpf-input").value,
         address: document.querySelector("#address-input").value,
-        phone: document.querySelector("#phone-input").value,
-        age: document.querySelector("#age-input").value,
         password: document.querySelector("#password-input").value,
         verifyPassword: document.querySelector("#verify-password-input").value
     }
@@ -22,8 +20,6 @@ button.addEventListener('click', (e) => {
         userInfo.surname === '' ||
         userInfo.cpf === '' ||
         userInfo.address === '' ||
-        userInfo.phone === '' ||
-        userInfo.age === '' ||
         userInfo.password === '' ||
         userInfo.verifyPassword === '') {
         formText.textContent = 'Você precisa preencher todos os campos'
@@ -35,17 +31,8 @@ button.addEventListener('click', (e) => {
         return
     }
 
-    if (Number(userInfo.phone) > 999999999) {
-        formText.textContent = 'Digite um número de telefone válido'
-        return
-    }
-    
-    if (Number(userInfo.age) > 99 || Number(userInfo.age) < 0) {
-        formText.textContent = 'Digite uma idade válida'
-        return
-    }
-
     formText.textContent = ''
+    
     if (userInfo.password === userInfo.verifyPassword) {
         document.querySelector('form').submit()
     }
