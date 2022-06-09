@@ -35,8 +35,8 @@ button.addEventListener('click', (e) => {
     
     if (userInfo.password === userInfo.verifyPassword) {
         document.querySelector('form').submit()
+        return
     }
-    else {
-        formText.textContent = 'As senhas não correspondem'
-    }
+    
+    formText.textContent = 'As senhas não correspondem'
 })

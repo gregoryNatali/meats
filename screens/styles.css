@@ -2,7 +2,7 @@
 
 /* Fontes: Outfit 300, 400, 600; Poppins 500, 700; Pavanam; Quicksand 400, 700; Raleway 700, Tauri */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Poppins:wght@500;700&family=Pavanam&family=Quicksand:wght@400;700&family=Raleway:wght@700&family=Tauri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Poppins:wght@500;700&family=Pavanam&family=Quicksand:wght@400;700&family=Raleway:wght@700&family=Tauri&display=swap');
 
 * {
     padding: 0;
@@ -13,7 +13,10 @@ main {
     width: 100%;
 }
 
-#destaques-body, #categorias-body, #meus-pedidos, #user-body {
+#destaques-body,
+#categorias-body,
+#meus-pedidos,
+#user-body {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -73,7 +76,7 @@ nav li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
 }
@@ -173,7 +176,7 @@ nav li {
 #destaques-grid {
     width: 80%;
     margin: 40px auto 11vh auto;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,7 +186,7 @@ nav li {
 .star {
     width: 1.25rem;
     display: flex;
-    
+
 }
 
 .flex {
@@ -191,7 +194,7 @@ nav li {
     display: flex;
 }
 
-.destaques-tile {
+.destaques-tile-first {
     font-family: 'Outfit', sans-serif;
     font-size: 15pt;
     font-weight: 400;
@@ -202,12 +205,31 @@ nav li {
     width: 100%;
     height: 120px;
     margin-bottom: 25px;
-    
+
     border-radius: 15px;
-    
+
     background-size: 150%;
     background-position: 50%;
-    /* box-shadow: 10px 10px 5px #000; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.destaques-tile {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15pt;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+
+    width: 100%;
+    height: 120px;
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    background-size: 150%;
+    background-position: 50%;
 
     display: flex;
     flex-direction: column;
@@ -216,24 +238,90 @@ nav li {
 .destaques-tile p {
     font-weight: 300;
     font-size: 12pt;
+
+}
+
+.destaques-wrapper-p {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+
+    position: relative;
+    align-items: flex-start;
 }
 
 .destaques-wrapper {
     height: 100%;
+    width: 100%;
 
     display: flex;
-    flex: column;
+    flex-direction: column;
 
     border-radius: 15px;
-    background:rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    
+}
+
+.destaques-conteudo {
+    margin-top: 65px;
+}
+
+.destaques-conteudo-p {
+    margin-top: 45px;
+}
+
+.destaques-wrapper span,
+.destaques-wrapper p,
+.destaques-wrapper-p span,
+.destaques-wrapper-p p {
+    margin-left: 0.25rem;
+    display: flex;
+    flex: 0 1 auto;
+
+    
+    height: max-content;
+}
+
+.score {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 0 0 0.75rem 0.25rem;
+}
+
+.score-first {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
 
     justify-content: left;
-    align-items: center;
+    align-items: flex-end;
+
+    padding: 0 0 0.75rem 0.25rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.score p, .score-first p {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    color: #D79B00;
 }
 
 .img-div {
     width: 100%;
 }
+
 /* Fim dos estilos da página 2 */
 
 /* Estilos da página 3 */
@@ -319,19 +407,20 @@ nav li {
     font-weight: 700;
     color: white;
     text-align: center;
-    
+
     margin-bottom: 50px;
     width: 100%;
     border-radius: 10px;
     height: 104px;
-    
+
     background-size: 150%;
     background-position: 50%;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 /* Fim dos estilos da página 3 */
 
 /* Estilos da página 4 */
@@ -370,7 +459,7 @@ nav li {
     display: flex;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    font-size: 18pt;  
+    font-size: 18pt;
     color: #777777;
 }
 
@@ -382,11 +471,12 @@ nav li {
     font-family: 'Quicksand', sans-serif;
     font-weight: bolder;
     font-weight: 400;
-    font-size: 11pt;  
+    font-size: 11pt;
     color: #777777;
     margin-top: 15px;
     margin-bottom: 70px;
 }
+
 /* Fim dos estilos da página 4 */
 
 /* Estilos da página 5 */
@@ -398,7 +488,7 @@ nav li {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+
     border-bottom: 2px black solid;
 }
 
@@ -434,7 +524,7 @@ nav li {
 .setting {
     width: 100%;
     padding: 20px 0 20px 0;
-    
+
 
     display: flex;
     align-items: center;
@@ -477,7 +567,7 @@ h3 {
     }
 }
 
-@media (min-width: 800px) {    
+@media (min-width: 800px) {
     .setting svg {
         padding: 0 5.07% 0 6.07%;
     }
@@ -499,6 +589,7 @@ h3 {
     #google-login svg {
         padding: 0 10px 0 5px;
     }
+
     #google-login span {
         margin-right: 10px;
     }
@@ -515,6 +606,7 @@ h3 {
         background-size: 200%;
     }
 }
+
 @media (min-height: 700px) {
     .logo-container {
         margin-top: 5vw;
@@ -525,6 +617,7 @@ h3 {
     .logo-container {
         margin-top: 5vw;
     }
+
     .logo-container svg {
         height: 350px;
     }
