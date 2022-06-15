@@ -1,6 +1,14 @@
 /* estilos globais */
 
-/* Fontes: Outfit 300, 400, 600; Poppins 500, 700; Pavanam; Quicksand 400, 700; Raleway 700, Tauri */
+/*
+    Fontes:
+        Outfit 300, 400, 600;
+        Poppins 500, 700;
+        Pavanam;
+        Quicksand 400, 700;
+        Raleway 700;
+        Tauri
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Poppins:wght@500;700&family=Pavanam&family=Quicksand:wght@400;700&family=Raleway:wght@700&family=Tauri&display=swap');
 
@@ -63,10 +71,10 @@ nav li {
 
 /* fim dos estilos globais */
 
-/* Estilos da página 1 */
+/* Estilos da página de login */
 
 #login-body {
-    background: url(login-background.png);
+    background: url(../assets/login-background.png);
     background-size: 150%;
     background-repeat: no-repeat;
     background-position-y: 60%;
@@ -149,9 +157,9 @@ nav li {
     margin: 10px 0 10px 0;
 }
 
-/* Fim dos estilos da página 1 */
+/* Fim dos estilos da página de login */
 
-/* Estilos da página 2 */
+/* Estilos da página de destaques */
 
 .destaques {
     width: 100%;
@@ -289,7 +297,6 @@ nav li {
     display: flex;
     flex: 0 1 auto;
 
-    
     height: max-content;
 }
 
@@ -328,9 +335,9 @@ nav li {
     width: 100%;
 }
 
-/* Fim dos estilos da página 2 */
+/* Fim dos estilos da página de destaques */
 
-/* Estilos da página 3 */
+/* Estilos da página de categorias */
 
 /* Barra de pesquisa + filtro */
 #pesquisa_filtro label {
@@ -427,9 +434,9 @@ nav li {
     justify-content: center;
 }
 
-/* Fim dos estilos da página 3 */
+/* Fim dos estilos da página de categorias */
 
-/* Estilos da página 4 */
+/* Estilos da página de pedidos */
 
 #square {
     height: 80px;
@@ -483,9 +490,9 @@ nav li {
     margin-bottom: 70px;
 }
 
-/* Fim dos estilos da página 4 */
+/* Fim dos estilos da página de pedidos */
 
-/* Estilos da página 5 */
+/* Estilos da página do usuário */
 
 /* Barra do topo da página */
 .top-bar {
@@ -563,7 +570,7 @@ h3 {
     font-weight: 400;
 }
 
-/* Fim dos estilos da página 5 */
+/* Fim dos estilos da página do usuário */
 
 /* Responsividade */
 

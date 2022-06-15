@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Outfit';
+}
+
+#back {
+    position: relative;
+    bottom: 35px;
+    right: 118px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 17pt;
+    font-weight: 600;
+    margin: 30px 0 10px 0;
+    color: rgb(68, 68, 68);
+}
+
+input {
+    padding-left: 8px;
+    font-family: 'Outfit';
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 15rem;
+    height: 30px;
+    border: 1px red solid;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: 1px rgb(255, 169, 169) solid;
+}
+
+.input-wrapper {
+    margin-right: 50%;
+    margin-left: 50%;
+    color: rgb(99, 99, 99);
+    font-size: 11pt;
+    font-weight: 400;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-wrapper label {
+    display: block;
+}
+
+#form-text {
+    margin-top: 10px;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+button {
+    margin-top: 7px;
+    width: 150px;
+    height: 35px;
+    font-size: 11pt;
+    font-weight: 500;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button:active {
+    background-color: rgb(206, 0, 0);
+}
+
+@media (max-width: 300px) {
+    input {
+        width: 80vw;
+    }
+
+    #back {
+        right: 40vw;
+    }
+
+    button {
+        width: 50vw;
+    }
+}
