@@ -268,11 +268,17 @@ nav li {
 }
 
 .destaques-conteudo {
-    margin-top: 65px;
+    padding: 0.625rem;
+    margin-top: 55px;
 }
 
 .destaques-conteudo-p {
-    margin-top: 45px;
+    padding: 0.625rem;
+    margin-top: 35px;
+}
+
+.conteudo-info-first {
+    padding: 0.625rem;
 }
 
 .destaques-wrapper span,
@@ -293,7 +299,7 @@ nav li {
     display: flex;
     flex-direction: row;
 
-    padding: 0 0 0.75rem 0.25rem;
+    padding: 0 0 1.375rem 0.875rem;
 }
 
 .score-first {
