@@ -34,13 +34,14 @@
             $email = $_POST['email'];
             $senha = $_POST['senha'];
             
-            $sql = "SELECT email_usuario, senha_usuario FROM usuario WHERE email_usuario = '$email' && senha_usuario = '$senha'";
+            $sql = "SELECT `email_usuario`, `senha_usuario` FROM `usuario` WHERE `email_usuario` = '$email' && `senha_usuario` = '$senha'";
             $result = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($result) > 0) { // caso o login seja sucedido, redirecione
               header("Location: destaques.html");
             } else {
-              echo "<script>document.querySelector('#form-text').innerText = 'E-mail ou senha inválidos'</script>";
+              echo "<script>document.querySelector('#form-text').textContent = 'E-mail ou senha inválidos'
+              document.querySelector('#email-input').value = '$email'</script>";
             }
         }
         

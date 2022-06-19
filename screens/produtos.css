@@ -1,0 +1,110 @@
+.img-produto {
+    width: 100%;
+    height: 250px;
+    margin: 25px 0 22px 0;
+    background-size: 110%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+main {
+    max-width: 450px;
+    margin-bottom: 15vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Outfit', sans-serif;
+}
+
+.horizontal-line {
+    width: 80%;
+    height: 1px;
+    background-color: black;
+}
+
+h1 {
+    font-size: 18pt;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+.info-produto {
+    width: 80%;
+    margin: 15px 0 10px 0;
+}
+
+.classificacao, .dinheiro {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 20px 0;
+}
+
+.classificacao span {
+    color: #D79B00;
+    font-weight: 500;
+    margin-left: 7px;
+}
+
+.dinheiro span {
+    color: #124A15;
+    margin-right: 7px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#quantidade {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+#quantidade span {
+    margin-right: 10px;
+}
+
+#numero-quant {
+    margin: 0 8px 0 8px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 40px;
+    width: 200px;
+    margin-top: 10px;
+    
+    border: none;
+    background-color: #236612;
+    color: white;
+
+    font-weight: 300;
+}
+
+button span {
+    margin-right: 8px;
+    font-family: 'Outfit', Arial;
+    font-size: 14px;
+}
+
+.avaliar {
+    font-size: 14px;
+    margin: 15px 0 5px 0;
+}
+
+@media (max-width: 360px) {
+    .img-produto {
+        background-size: 150%;
+    }
+}

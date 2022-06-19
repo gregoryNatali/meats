@@ -1,0 +1,36 @@
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 390px;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: 'Outfit';
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+#estrelas {
+    margin-top: 50px;
+    font-size: 5px;
+}
+
+button {
+    margin-top: 100px;
+    width: 170px;
+    height: 40px;
+    
+    font-size: 11pt;
+    font-family: 'Outfit';
+    font-weight: 300;
+    
+    background-color: #236612;
+    color: white;
+
+    border: none;
+    outline: none;
+}

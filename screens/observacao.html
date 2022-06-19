@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="observacao_pedido.css" >
+<link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+<title>Observação</title>
+</head>
+
+<body>
+    <main>
+        <div class="main-div">
+            <!--Título-->
+            <h1>Adicione uma observação:</h1>
+            <div id="adicionar_observacao">
+                <label for="input_observacao">
+                    <div class="barra_observacao">
+                        <input id="input_observacao" type="text" placeholder="Digite aqui">
+                        <div class="horizontal-line"></div>
+                    </div>
+                    <p>100</p>
+                </label>
+            </div>
+        </div>
+        <a href="produto.html"><button type="submit">Adicionar</button></a>
+    </main>
+  
+  <!--Barra de navegação-->
+  <nav>
+    <div id="list">
+      <li>
+        <a href="destaques.html">
+          <div>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27.6371 14.4536L15.0385 0.443421C14.508 -0.147807 13.4889 -0.147807 12.9583 0.443421L0.359737 14.4536C0.178396 14.6548 0.0593652 14.9043 0.0171174 15.172C-0.0251305 15.4396 0.011225 15.7137 0.121764 15.9611C0.345739 16.4668 0.846883 16.7919 1.39982 16.7919H4.19951V26.599C4.19951 26.9706 4.34699 27.3269 4.60951 27.5897C4.87203 27.8524 5.22809 28 5.59935 28H9.79888C10.1701 28 10.5262 27.8524 10.7887 27.5897C11.0512 27.3269 11.1987 26.9706 11.1987 26.599V20.9949H16.7981V26.599C16.7981 26.9706 16.9456 27.3269 17.2081 27.5897C17.4706 27.8524 17.8267 28 18.1979 28H22.3975C22.7687 28 23.1248 27.8524 23.3873 27.5897C23.6498 27.3269 23.7973 26.9706 23.7973 26.599V16.7919H26.597C26.8681 16.793 27.1337 16.7152 27.3614 16.5679C27.589 16.4206 27.769 16.2102 27.8792 15.9623C27.9895 15.7144 28.0253 15.4398 27.9823 15.1719C27.9393 14.904 27.8194 14.6544 27.6371 14.4536V14.4536Z" fill="#494949"/>
+            </svg>
+          </div>
+          Início
+        </a>
+      </li>
+      <li>
+        <a href="categorias.html">
+          <div>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.5 24.5L19.2664 19.257L24.5 24.5ZM22.1667 12.25C22.1667 14.8801 21.1219 17.4024 19.2622 19.2622C17.4024 21.1219 14.8801 22.1667 12.25 22.1667C9.61998 22.1667 7.09763 21.1219 5.2379 19.2622C3.37816 17.4024 2.33337 14.8801 2.33337 12.25C2.33337 9.61995 3.37816 7.0976 5.2379 5.23787C7.09763 3.37813 9.61998 2.33334 12.25 2.33334C14.8801 2.33334 17.4024 3.37813 19.2622 5.23787C21.1219 7.0976 22.1667 9.61995 22.1667 12.25V12.25Z" stroke="#494949" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          Busca
+        </a>
+      </li>
+      <li>
+        <a href="pedidos.html">
+          <div>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.63987 11.48C4.6868 10.8953 4.95225 10.3497 5.38336 9.95187C5.81446 9.55406 6.37959 9.33322 6.9662 9.33334H21.0339C21.6205 9.33322 22.1856 9.55406 22.6167 9.95187C23.0478 10.3497 23.3133 10.8953 23.3602 11.48L24.297 23.1467C24.3228 23.4677 24.2818 23.7907 24.1767 24.0951C24.0715 24.3995 23.9045 24.6789 23.6861 24.9156C23.4676 25.1524 23.2026 25.3413 22.9076 25.4705C22.6125 25.5998 22.294 25.6666 21.9719 25.6667H6.0282C5.70611 25.6666 5.38753 25.5998 5.09251 25.4705C4.79749 25.3413 4.53243 25.1524 4.31401 24.9156C4.0956 24.6789 3.92855 24.3995 3.8234 24.0951C3.71825 23.7907 3.67727 23.4677 3.70304 23.1467L4.63987 11.48V11.48Z" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 12.8333V7.00001C18.6667 5.76233 18.175 4.57535 17.2999 3.70018C16.4247 2.82501 15.2377 2.33334 14 2.33334C12.7624 2.33334 11.5754 2.82501 10.7002 3.70018C9.82504 4.57535 9.33337 5.76233 9.33337 7.00001V12.8333" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          Meus pedidos
+        </a>
+      </li>
+      <li>
+        <a href="user.html">
+          <div>
+            <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 2.33334C7.28663 2.33334 2.25 7.55651 2.25 14C2.25 20.4435 7.28663 25.6667 13.5 25.6667C19.7134 25.6667 24.75 20.4435 24.75 14C24.75 7.55651 19.7134 2.33334 13.5 2.33334Z" stroke="#494949" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4.80493 21.4037C4.80493 21.4037 7.31256 18.0833 13.5001 18.0833C19.6876 18.0833 22.1963 21.4037 22.1963 21.4037" stroke="#494949" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.5 14C14.3951 14 15.2536 13.6313 15.8865 12.9749C16.5194 12.3185 16.875 11.4283 16.875 10.5C16.875 9.57174 16.5194 8.6815 15.8865 8.02513C15.2536 7.36875 14.3951 7 13.5 7C12.6049 7 11.7464 7.36875 11.1135 8.02513C10.4806 8.6815 10.125 9.57174 10.125 10.5C10.125 11.4283 10.4806 12.3185 11.1135 12.9749C11.7464 13.6313 12.6049 14 13.5 14V14Z" stroke="#494949" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          Perfil
+        </a>
+      </li>
+    </div>
+  </nav>
+</body>
