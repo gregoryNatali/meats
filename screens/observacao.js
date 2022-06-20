@@ -1,4 +1,4 @@
-let inputObs = document.querySelector('#input_observacao')
+const inputObs = document.querySelector('#input_observacao')
 
 inputObs.addEventListener('keyup', () => {
     const counter = document.querySelector('#input-counter')

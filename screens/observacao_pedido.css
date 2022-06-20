@@ -53,6 +53,10 @@ button {
     color: #818181;
 }
 
+#input_observacao:focus {
+    color: #000;
+}
+
 #adicionar_observacao {
     margin-top: 40px;
 }

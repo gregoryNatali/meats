@@ -26,23 +26,34 @@ h1 {
     color: rgb(68, 68, 68);
 }
 
-input {
-    padding-left: 8px;
-    font-family: 'Outfit';
-    display: block;
+.input-wrapper {
     margin-top: 5px;
     margin-bottom: 15px;
     width: 15rem;
     height: 30px;
     border: 1px red solid;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
-input:focus {
+.input-wrapper svg {
+    margin-left: 6px;
+}
+
+input {
+    margin-left: 6px;
+    font-family: 'Outfit';
+    display: block;
+    border: none;
+    outline: none;
+}
+
+/* input:focus {
     outline: 1px rgb(255, 169, 169) solid;
-}
+} */
 
-.input-wrapper {
+.form-wrapper {
     margin-right: 50%;
     margin-left: 50%;
     color: rgb(99, 99, 99);
@@ -80,6 +91,19 @@ button {
 
 button:active {
     background-color: rgb(206, 0, 0);
+}
+
+input:-webkit-autofill{
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @media (max-width: 300px) {

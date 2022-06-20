@@ -74,6 +74,7 @@ a {
 
 #numero-quant {
     margin: 0 8px 0 8px;
+    user-select: none;
 }
 
 button {
@@ -90,6 +91,8 @@ button {
     color: white;
 
     font-weight: 300;
+
+    user-select: none;
 }
 
 button span {
