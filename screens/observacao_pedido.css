@@ -19,8 +19,11 @@ main {
     max-width: 450px;
 }
 
-button {
+a {
     margin-top: 100px;
+}
+
+button {
     width: 170px;
     height: 40px;
     
@@ -42,6 +45,7 @@ button {
 #input_observacao {
     border: none;
     outline: none;
+    width: 100%;
 
     font-family: 'Outfit';
     font-weight: 500;
