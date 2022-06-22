@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login-cadastro.css">
-    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/login-cadastro.css">
+    <link rel="shortcut icon" href="../../assets/logo.png" type="image/x-icon">
     <title>Cadastro</title>
 </head>
 <body>
@@ -94,9 +94,9 @@
         <button id="register-button" name="submit-button" type="submit">Cadastrar</button>
         <small id="form-text"></small>
     </form>
-    <script src="register.js"></script>
+    <script src="../scripts/register.js"></script>
     <?php
-        require_once('../dbconnect.php');
+        require_once('../../dbconnect.php');
 
         if(isset($_POST['email'])) {
             $email = $_POST['email'];

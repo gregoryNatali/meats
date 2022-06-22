@@ -50,7 +50,7 @@ button {
     font-family: 'Outfit';
     font-weight: 500;
     font-size: 15px;
-    color: #818181;
+    color: #585858;
 }
 
 #input_observacao:focus {
@@ -71,5 +71,5 @@ button {
 #adicionar_observacao p {
     float: right;
     font-size: 15px;
-    color: #818181;
+    color: #585858;
 }
