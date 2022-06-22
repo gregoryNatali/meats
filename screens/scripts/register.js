@@ -6,11 +6,11 @@ button.addEventListener('click', (e) => {
     const formText = document.querySelector("#form-text")
 
     let userInfo = {
-        email: document.querySelector("#email-input").value,
-        name: document.querySelector("#name-input").value,
-        surname: document.querySelector("#surname-input").value,
-        cpf: document.querySelector("#cpf-input").value,
-        address: document.querySelector("#address-input").value,
+        email: document.querySelector("#email-input").value.trim(),
+        name: document.querySelector("#name-input").value.trim(),
+        surname: document.querySelector("#surname-input").value.trim(),
+        cpf: document.querySelector("#cpf-input").value.trim(),
+        address: document.querySelector("#address-input").value.trim(),
         password: document.querySelector("#password-input").value,
         verifyPassword: document.querySelector("#verify-password-input").value
     }
@@ -45,7 +45,7 @@ button.addEventListener('click', (e) => {
 
     if (userInfo.password === userInfo.verifyPassword) {
         formText.textContent = ''
-        document.querySelector('form').submit()
+        document.querySelector('form').submit() // envia para o php
         return
     }
     

@@ -45,9 +45,11 @@
             </div>
             <?php
                 require_once('../../dbconnect.php');
-                $valor = $_GET['search'];
+                $query = $_GET['search'];
 
-                echo "<script>document.querySelector('#input_pesquisa').value = '$valor'</script>";
+                echo "<script>document.querySelector('#input_pesquisa').value = '$query'</script>";
+
+                $query = trim($query);
             ?>
             <!--"Categorias" + retângulo-->
             <div>
@@ -56,29 +58,28 @@
             </div>
             <div id="resultados">
                 <?php
-                    $sql_categoria = "SELECT * FROM categoria WHERE nome_categoria LIKE '%$valor%' ORDER BY nome_categoria ASC";
-                    $sql_produto = "SELECT * FROM cardapio WHERE nome_produto LIKE '%$valor%' ORDER BY nome_produto ASC";
+                    $sql_categoria = "SELECT * FROM categoria WHERE nome_categoria LIKE '%$query%' ORDER BY nome_categoria ASC";
+                    $sql_produto = "SELECT * FROM cardapio WHERE nome_produto LIKE '%$query%' ORDER BY nome_produto ASC";
                     
-                    $result_categoria = mysqli_query($conn, $sql_categoria);
-                    $result_produto = mysqli_query($conn, $sql_produto);
+                    $results_categoria = mysqli_query($conn, $sql_categoria);
+                    $results_produto = mysqli_query($conn, $sql_produto);
                     
-                    if ($valor != '') {
-                        if (mysqli_num_rows($result_categoria) > 0) {
+                    if ($query != '') {
+                        if (mysqli_num_rows($results_categoria) > 0) {
                             echo "<h2>Categorias</h2>";
-                            while($row = mysqli_fetch_assoc($result_categoria)) {
-                                echo "<p>". $row["nome_categoria"]. " </p>";
+                            while($linha = mysqli_fetch_assoc($results_categoria)) { // enquanto tiver resultados, imprima-os no documento
+                                echo "<p>". $linha["nome_categoria"]. " </p>";
                             }
                         }
     
-                        
-                        if (mysqli_num_rows($result_produto) > 0) {
+                        if (mysqli_num_rows($results_produto) > 0) {
                             echo "<h2>Produtos</h2>";
-                            while($row = mysqli_fetch_assoc($result_produto)) {
-                                echo "<p>". $row["nome_produto"]. " </p>";
+                            while($linha = mysqli_fetch_assoc($results_produto)) { // enquanto tiver resultados, imprima-os no documento
+                                echo "<p>". $linha["nome_produto"]. " </p>";
                             }
                         }
     
-                        if (mysqli_num_rows($result_categoria) == 0 && mysqli_num_rows($result_produto) == 0) {
+                        if (mysqli_num_rows($results_categoria) == 0 && mysqli_num_rows($results_produto) == 0) {
                             echo "<p>Nenhum resultado encontrado</p>";
                         }
                     } else {
@@ -93,7 +94,7 @@
         <nav>
             <div id="list">
                 <li>
-                    <a href="inicio.html">
+                    <a href="inicio.php">
                         <div>
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M27.6371 14.4536L15.0385 0.443421C14.508 -0.147807 13.4889 -0.147807 12.9583 0.443421L0.359737 14.4536C0.178396 14.6548 0.0593652 14.9043 0.0171174 15.172C-0.0251305 15.4396 0.011225 15.7137 0.121764 15.9611C0.345739 16.4668 0.846883 16.7919 1.39982 16.7919H4.19951V26.599C4.19951 26.9706 4.34699 27.3269 4.60951 27.5897C4.87203 27.8524 5.22809 28 5.59935 28H9.79888C10.1701 28 10.5262 27.8524 10.7887 27.5897C11.0512 27.3269 11.1987 26.9706 11.1987 26.599V20.9949H16.7981V26.599C16.7981 26.9706 16.9456 27.3269 17.2081 27.5897C17.4706 27.8524 17.8267 28 18.1979 28H22.3975C22.7687 28 23.1248 27.8524 23.3873 27.5897C23.6498 27.3269 23.7973 26.9706 23.7973 26.599V16.7919H26.597C26.8681 16.793 27.1337 16.7152 27.3614 16.5679C27.589 16.4206 27.769 16.2102 27.8792 15.9623C27.9895 15.7144 28.0253 15.4398 27.9823 15.1719C27.9393 14.904 27.8194 14.6544 27.6371 14.4536V14.4536Z"fill="#494949" />
@@ -140,11 +141,11 @@
         </nav>
         <script>
             const inputBar = document.querySelector('#input_pesquisa')
-            inputBar.focus()
-            inputBar.addEventListener('keydown', (e) => {
+            inputBar.focus() // mantém o usuário escrevendo
+            inputBar.addEventListener('keydown', () => {
                 setTimeout(() => {
-                    document.querySelector('form').submit()
-                }, 1600);
+                    document.querySelector('form').submit() // após um tempo do usuário digitar, redireciona para o php
+                }, 2000);
             })
         </script>
 

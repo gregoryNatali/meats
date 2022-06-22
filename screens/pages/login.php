@@ -51,7 +51,7 @@
             $result = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($result) > 0) { // caso o login seja sucedido, redirecione
-              header("Location: inicio.html");
+              header("Location: inicio.php");
             } else {
               echo "<script>document.querySelector('#form-text').textContent = 'E-mail ou senha inválidos'
               document.querySelector('#email-input').value = '$email'</script>";

@@ -110,20 +110,20 @@
             $verify_already_exists = "SELECT `email_usuario` FROM `usuario` WHERE `email_usuario` = '$email'";
             $verification = mysqli_query($conn, $verify_already_exists);
 
-            if (mysqli_num_rows($verification) > 0) {
+            if (mysqli_num_rows($verification) > 0) { # caso já exista um cadastro nesse e-mail
                 echo "<script>
-                document.querySelector('#form-text').textContent = 'Já existe um usuário cadastrado com esse e-mail'
-                document.querySelector('#email-input').value = '$email'
-                document.querySelector('#name-input').value = '$nome'
-                document.querySelector('#surname-input').value = '$sobrenome'
-                document.querySelector('#cpf-input').value = $cpf
-                document.querySelector('#address-input').value = '$endereco'
+                    document.querySelector('#form-text').textContent = 'Já existe um usuário cadastrado com esse e-mail'
+                    document.querySelector('#email-input').value = '$email'
+                    document.querySelector('#name-input').value = '$nome'
+                    document.querySelector('#surname-input').value = '$sobrenome'
+                    document.querySelector('#cpf-input').value = $cpf
+                    document.querySelector('#address-input').value = '$endereco'
                 </script>";
             } else {    
                 $insertsql = "INSERT INTO `usuario`
                 (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usuario`, `endereco_usuario`, `numero_cartao`, `cpf_usuario`)
                 VALUES (NULL, '$nome_completo', '$email', '$senha', '$endereco', NULL, '$cpf')";
-                $insert = mysqli_query($conn, $insertsql);
+                $insert = mysqli_query($conn, $insertsql); # realiza a inserção do cadastro no banco
                 
                 echo "<script>
                 document.querySelector('body').innerHTML = ''
