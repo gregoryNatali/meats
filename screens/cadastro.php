@@ -132,7 +132,7 @@
                 
                 if (!$insert) {
                     echo '<h1>Erro: não foi possível cadastrar o usuário.</h1>';
-                    die('<a href="cadastro.html"><button>Voltar</button></a>');
+                    die('<a href="cadastro.php"><button>Voltar</button></a>');
                 }
                 
                 echo "<h1>O usuário com o email <strong>$email</strong> foi cadastrado com sucesso.</h1>";

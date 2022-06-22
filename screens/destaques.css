@@ -1,0 +1,187 @@
+.destaques {
+    width: 100%;
+    height: 60px;
+    margin-top: 5px;
+    padding-bottom: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 500;
+    font-size: 20pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.linha-destaques {
+    background-color: #000;
+    height: 1px;
+    width: 200px;
+}
+
+/* Grid + tiles */
+
+#destaques-grid {
+    width: 80%;
+    margin: 30px auto 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    width: 1.25rem;
+    display: flex;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+}
+
+.destaques-tile {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13pt;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+
+    width: 100%;
+    height: 135px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    background-size: 130%;
+    background-position: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.destaques-tile p {
+    font-weight: 300;
+    font-size: 11pt;
+}
+
+.destaques-wrapper {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.destaques-conteudo {
+    padding: 0.625rem;
+}
+
+.destaques-wrapper span,
+.destaques-wrapper p,
+.destaques-wrapper-p span,
+.destaques-wrapper-p p {
+    display: flex;
+    flex: 0 1 auto;
+
+    height: max-content;
+}
+
+.score {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.score p, .score-first p {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 13pt;
+
+    color: #D79B00;
+    padding: 0 0 0 0.35rem !important;
+}
+
+.img-div {
+    width: 100%;
+}
+
+/* classes para destaques com uma descrição */
+
+.destaques-wrapper-p {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.35);
+
+    position: relative;
+    align-items: flex-start;
+    justify-content: end;
+}
+
+.destaques-conteudo-p {
+    padding: 0.625rem;
+}
+
+.destaques-conteudo-p p {
+    padding-bottom: 5px;
+}
+
+.score svg, .score-first svg {
+    width: 15px;
+}
+
+/* primeiro destaque */
+
+.destaques-tile-first {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15pt;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+
+
+    width: 100%;
+    height: 120px;
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    background-size: 150%;
+    background-position: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-info-first {
+    padding: 0.625rem;
+}
+
+.score-first {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: left;
+    align-items: center;
+
+    padding: 0 0 0.625rem 0.625rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

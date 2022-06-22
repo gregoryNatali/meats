@@ -6,13 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="destaques.css">
   <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet"> 
   <title>Destaques</title>
+  <style>
+    main {
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #destaques-grid {
+      margin: 30px auto 12vh auto;
+    }
+  </style>
 </head>
 
 <body>
-  <main style="display: flex; flex-direction:column; align-items: center;">
+  <main>
     <!--Título-->
     <div class="destaques">
       <svg style="margin-right: 22px;" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -33,8 +45,8 @@
 
     <div id="destaques-grid">
       <div class="flex">
-        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_1.png); width: 68%; margin-right: 5px;">
-          <div class="destaques-wrapper-p">
+        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_1.png); width: 63%; margin-right: 9px;">
+          <div class="destaques-wrapper-p" style="justify-content: start;">
             <div class="conteudo-info-first">
               <span>Steak Power</span>
               <p>Com fritas e onion rings</p>
@@ -47,16 +59,16 @@
             </div>
           </div>
         </div>
-        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_2.png); width: 32%; margin-left: 5px;">
+        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_2.jpg); width: 37%; margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Pepsi Lata</span>
-            </div>
-            <div class="score">
-              <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
-              </svg>
-              <p>4.5</p>
+              <div class="score">
+                <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
+                </svg>
+                <p>4.5</p>
+              </div>
             </div>
           </div>
         </div>
@@ -65,7 +77,7 @@
         <div class="destaques-wrapper-p">
           <div class="destaques-conteudo-p">
             <span>Hambúrguer Gourmet</span>
-            <p>Especial Com fritas</p>
+            <p>Especial com fritas</p>
             <div class="score">
               <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
@@ -76,7 +88,7 @@
         </div>
       </div>
       <div class="flex">
-        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_4.jpg); width: 35%; margin-right: 5px;">
+        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_4.jpg); width: 40%; margin-right: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Drink de Morango</span>
@@ -89,7 +101,7 @@
             </div>
           </div>
         </div>
-        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_5.png); width: 65%; margin-left: 5px;">
+        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_5.png); width: 60%; margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Hamburger Veggie</span>
@@ -104,7 +116,7 @@
         </div>
       </div>
       <div class="flex">
-        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_6.png); margin-right: 5px;">
+        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_6.png); margin-right: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Baconburger Simples</span>
@@ -117,7 +129,7 @@
             </div>
           </div>
         </div>
-        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_7.jpg); margin-left: 5px;">
+        <div class="destaques-tile" style="background-image: url(../assets/destaques/destaques_7.jpg); margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Chicken Dream</span>
@@ -152,12 +164,12 @@
     <div id="list">
       <li>
         <!--Tela atual, por isso o color: black-->
-        <a href="destaques.html" style="color: black;">
+        <a href="inicio.html">
           <div>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M27.6371 14.4536L15.0385 0.443421C14.508 -0.147807 13.4889 -0.147807 12.9583 0.443421L0.359737 14.4536C0.178396 14.6548 0.0593652 14.9043 0.0171174 15.172C-0.0251305 15.4396 0.011225 15.7137 0.121764 15.9611C0.345739 16.4668 0.846883 16.7919 1.39982 16.7919H4.19951V26.599C4.19951 26.9706 4.34699 27.3269 4.60951 27.5897C4.87203 27.8524 5.22809 28 5.59935 28H9.79888C10.1701 28 10.5262 27.8524 10.7887 27.5897C11.0512 27.3269 11.1987 26.9706 11.1987 26.599V20.9949H16.7981V26.599C16.7981 26.9706 16.9456 27.3269 17.2081 27.5897C17.4706 27.8524 17.8267 28 18.1979 28H22.3975C22.7687 28 23.1248 27.8524 23.3873 27.5897C23.6498 27.3269 23.7973 26.9706 23.7973 26.599V16.7919H26.597C26.8681 16.793 27.1337 16.7152 27.3614 16.5679C27.589 16.4206 27.769 16.2102 27.8792 15.9623C27.9895 15.7144 28.0253 15.4398 27.9823 15.1719C27.9393 14.904 27.8194 14.6544 27.6371 14.4536V14.4536Z"
-                fill="black" />
+                fill="#494949" />
             </svg>
           </div>
           Início
@@ -210,6 +222,14 @@
       </li>
     </div>
   </nav>
+  <script>
+    if (screen.width < 540) {
+      document.querySelectorAll('.destaques-tile')[3].style.backgroundSize = "200%"
+    }
+    if (screen.width < 360) {
+      document.querySelectorAll('.destaques-tile')[3].style.backgroundSize = "300%"
+    }
+  </script>
 </body>
 
 </html>
