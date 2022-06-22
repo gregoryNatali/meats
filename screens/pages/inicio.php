@@ -17,6 +17,11 @@
       flex-direction: column;
       align-items: center;
     }
+    .produtos button {
+        text-align: left;
+        border: none;
+        width: 100%;
+    }
   </style>
 </head>
 
@@ -123,7 +128,7 @@
     </a>
     <div style="height: 1px; background-color: black; width: 90px; margin: 0 auto 0 auto;"></div>
 
-    <div class="cardapio">
+    <form class="cardapio" action="produto.php" method="post">
       
         <section>
             <div class="titulo-cardapio">
@@ -142,9 +147,10 @@
 
                         while ($linha = mysqli_fetch_assoc($lanches)) {
                             # inserindo cada produto do cardápio e suas informações
-                            echo "<div class=\"produto-wrapper\">
+                            echo "<button class=\"produto-wrapper\" value=" . $linha["id_cardapio"] . " name='produto'>
+                            
                             <div class=\"produto-img\" style=\"background-image: url(../../assets/cardapio/1.jpeg);\"></div>
-                            <div class=\"info-produto\">
+                            <div class=\"info-cardapio\">
                                 <h3>" . $linha["nome_produto"] . "</h3>
                                 <p>" . $linha["descricao_produto"] . "</p>
                                 <div class=\"dinheiro\">
@@ -161,7 +167,7 @@
                                 </svg>                  
                                 </div>
                             </div>
-                            </div>';
+                            </button>';
                         }
                     ?>
             </div>
@@ -180,7 +186,7 @@
             </div>
         </section>
 
-    </div>
+    </form>
 
   </main>
 
@@ -261,6 +267,15 @@
     for (let pos = 0; pos < valoresDinheiro.length; pos++) {
         let text = valoresDinheiro[pos].firstElementChild.textContent
         valoresDinheiro[pos].firstElementChild.textContent = text.replace(".", ",") // trocando o ponto do dinheiro por vírgula
+    }
+  </script>
+  <script>
+    const produtos = document.querySelectorAll('.produto-wrapper')
+    
+    for (let index = 0; index < produtos.length; index++) {
+        produtos[index].addEventListener('click', () => {
+            document.querySelector('form').submit()
+        })
     }
   </script>
 </body>
