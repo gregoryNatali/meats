@@ -1,9 +1,9 @@
 <?php
     function userIsLogged() {
         session_start();
-        // if (!isset($_SESSION['user'])) { // caso o usuario não esteja logado, redirecione para o index
-        //     return header("Location: index.html");
-        // }
+        if (!isset($_SESSION['user'])) { // caso o usuario não esteja logado, redirecione para o index
+            return header("Location: index.html");
+        }
     }
 
     function fillMenu($line) {
