@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -47,10 +46,12 @@
             $email = $_POST['email'];
             $senha = $_POST['senha'];
             
-            $sql = "SELECT `email_usuario`, `senha_usuario` FROM `usuario` WHERE `email_usuario` = '$email' && `senha_usuario` = '$senha'";
+            $sql = "SELECT `id_usuario`, `email_usuario`, `senha_usuario` FROM `usuario` WHERE `email_usuario` = '$email' && `senha_usuario` = '$senha'";
             $result = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($result) > 0) { // caso o login seja sucedido, redirecione
+              session_start();
+              $_SESSION['user'] = mysqli_fetch_assoc($result)['id_usuario']; // guarda a sessão com o id do usuário
               header("Location: inicio.php");
             } else {
               echo "<script>document.querySelector('#form-text').textContent = 'E-mail ou senha inválidos'
