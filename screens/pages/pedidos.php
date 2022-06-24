@@ -14,6 +14,8 @@
         <title>Meus Pedidos</title>
     </head>
     <body>
+        <!--Barra de navegação-->
+        <?php include('navbar.html'); ?>
         <main>
             <div class="body-bg">    
                 <div id="square">Meus Pedidos</div>
@@ -30,7 +32,6 @@
                 <div id="dinheiro">Dinheiro bem gasto é dinheiro gasto com comida!</div>
             </div>
         </main>
-        <?php require_once('navbar.html'); ?>
         <script>
             let navButton = document.querySelectorAll('nav a')
             navButton[2].innerHTML = `<div>

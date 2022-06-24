@@ -28,6 +28,8 @@
 </head>
 
 <body>
+  <!--Barra de navegação-->
+  <?php include('navbar.html'); ?>
   <main>
     <!--Título-->
     <div class="destaques">
@@ -163,8 +165,6 @@
     </div>
   </main>
 
-  <!--Barra de navegação-->
-  <?php require_once('navbar.html'); ?>
   <script>
     if (screen.width < 540) {
       document.querySelectorAll('.destaques-tile')[3].style.backgroundSize = "200%"

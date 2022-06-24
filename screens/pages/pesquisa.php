@@ -35,6 +35,8 @@
         </style>
     </head>
     <body>
+        <!--Barra de navegação-->
+        <?php include('navbar.html'); ?>
         <main>
             <!--Barra de pesquisa + filtro-->
             <div id="pesquisa_filtro">
@@ -64,7 +66,7 @@
                 <p class="categorias">Resultados</p>
                 <div class="retangulo"></div>
             </div>
-            <form id="resultados" action="produto.php" method="post">
+            <div id="resultados">
                 <?php
                     $sql_categoria = "SELECT * FROM categoria WHERE nome_categoria LIKE '%$query%' ORDER BY nome_categoria ASC";
                     $sql_produto = "SELECT * FROM cardapio WHERE nome_produto LIKE '%$query%' ORDER BY nome_produto ASC";
@@ -81,10 +83,11 @@
                         }
     
                         if (mysqli_num_rows($results_produto) > 0) {
-                            echo "<h2>Produtos</h2>";
+                            echo "<form action=\"produto.php\" method=\"post\"><h2>Produtos</h2>";
                             while($linha = mysqli_fetch_assoc($results_produto)) { // enquanto tiver resultados, imprima-os no documento
                                 echo "<button value=" . $linha["id_cardapio"] . " name='produto'><p>". $linha["nome_produto"]. "</p></button><br>";
                             }
+                            echo "</form>";
                         }
     
                         if (mysqli_num_rows($results_categoria) == 0 && mysqli_num_rows($results_produto) == 0) {
@@ -95,11 +98,9 @@
                     }
                     
                 ?>
-            </form>
+            </div>
 
         </main>
-        <!--Barra de navegação-->
-        <?php require_once('navbar.html'); ?>
         <script>
             const inputBar = document.querySelector('#input_pesquisa')
             inputBar.focus() // mantém o usuário escrevendo

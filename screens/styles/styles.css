@@ -216,7 +216,7 @@ nav li {
 .titulo-cardapio h2 {
     font-weight: 400;
     font-size: 14pt;
-    width: 85px;
+    margin-right: 0.5rem;
 }
 
 .produtos h3 {

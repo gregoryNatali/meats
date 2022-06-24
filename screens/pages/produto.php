@@ -11,6 +11,8 @@
     <title>Categorias</title>
   </head>
   <body>
+    <!--Barra de navegação-->
+    <?php include('navbar.html'); ?>
     <main>
         <?php
           require_once('../../dbconnect.php');
@@ -20,10 +22,9 @@
           INNER JOIN categoria ON cardapio.id_categoria = categoria.id_categoria
           WHERE id_cardapio = $id_cardapio";
           $query = mysqli_query($conn, $sql_produto);
-
           $resultado = mysqli_fetch_assoc($query);
         ?>
-        <div style="background-image: url('../../assets/cardapio/<?php echo $id_cardapio;?>.jpg');" class="img-produto"></div>
+        <div style="<?php echo loadProductImage($conn, $id_cardapio);?>" class="img-produto"></div>
         <div class="horizontal-line"></div>
         <div class="info-produto">
             <?php
@@ -52,8 +53,7 @@
         <a href="avaliar.php" class="avaliar">Avaliar este produto</a>
     </main>
     
-    <!--Barra de navegação-->
-    <?php require_once('navbar.html'); ?>
+    <script src="../scripts/dinheiro.js"></script>
     <script src="../scripts/produto.js"></script>
   </body>
 </html>

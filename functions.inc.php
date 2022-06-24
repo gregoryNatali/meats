@@ -6,9 +6,10 @@
         }
     }
 
-    function fillMenu($line) {
+    function fillMenu($conn, $line) {
+        $id_cardapio = $line["id_cardapio"];
         echo "<button class=\"produto-wrapper\" value=" . $line["id_cardapio"] . " name='produto'>
-            <div class=\"produto-img\" style=\"background-image: url(../../assets/cardapio/1.jpeg);\"></div>
+            <div class=\"produto-img\" style=\"" . loadProductImage($conn, $id_cardapio) . " background-size: 180%;\"></div>
                 <div class=\"info-cardapio\">
                 <h3>" . $line["nome_produto"] . "</h3>
                 <p>" . $line["descricao_produto"] . "</p>
@@ -54,5 +55,11 @@
                       </defs>
                   </svg>                    
               </div>';
+    }
+
+    function loadProductImage($conn, $id) {
+        $sql = "SELECT * FROM produto_imagem WHERE id_produto = $id";
+        $imagem = mysqli_fetch_assoc(mysqli_query($conn, $sql))['imagem'];
+        return 'background-image: url(\'data:image/jpeg;base64,' . base64_encode($imagem) . '\');';
     }
 ?>

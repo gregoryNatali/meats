@@ -1,6 +1,7 @@
 <?php
   include('../../functions.inc.php');
   userIsLogged();
+  require_once('../../dbconnect.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,6 +16,8 @@
 </head>
 
 <body>
+    <!--Barra de navegação-->
+    <?php include('navbar.html'); ?>
     <main>
         <div class="main-div">
             <!--Título-->
@@ -32,7 +35,5 @@
         <a href="produto.php"><button type="submit">Adicionar</button></a>
     </main>
     
-    <!--Barra de navegação-->
-    <?php require_once('navbar.html'); ?>
   <script src="../scripts/observacao.js"></script>
 </body>

@@ -13,6 +13,8 @@
         <title>Categorias</title>
     </head>
     <body>
+        <!--Barra de navegação-->
+        <?php include('navbar.html'); ?>
         <main>
             <!--Barra de pesquisa + filtro-->
             <div id="pesquisa_filtro">
@@ -65,8 +67,6 @@
             </div>
             </div>
         </main>
-        <!--Barra de navegação-->
-        <?php require_once('navbar.html'); ?>
         <script>
             const inputBar = document.querySelector('#input_pesquisa')
             inputBar.focus() // mantém o usuário escrevendo

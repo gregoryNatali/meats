@@ -15,6 +15,8 @@
   </head>
 
   <body id="user-body">
+    <!--Barra de navegação-->
+    <?php include('navbar.html'); ?>
     <main>
       <div class="top-bar">
         <div style="margin-left: 5vw">
@@ -126,7 +128,6 @@
       </div>
     </main>
 
-    <?php require_once('navbar.html'); ?>
     <script>
       let navButton = document.querySelectorAll('nav a')
       navButton[3].innerHTML = `<div>
