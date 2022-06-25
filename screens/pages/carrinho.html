@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/carrinho.css">
+  <link rel="shortcut icon" href="../../assets/logo.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
+  <title>Meu Carrinho</title>
+  <style>
+    main {
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .produtos button {
+      text-align: left;
+      border: none;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Barra de navegação-->
+  <!-- <?php include('navbar.html'); ?> -->
+  <main>
+
+    <!--Título-->
+    <div class="carrinho">
+      Meu Carrinho
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M27.2775 9.28876C27.1625 9.1226 27.009 8.98678 26.83 8.89295C26.6511 8.79912 26.4521 8.75007 26.25 8.75001H9.16625L7.72375 5.28751C7.53461 4.83153 7.21434 4.44199 6.80353 4.16827C6.39273 3.89455 5.90989 3.74897 5.41625 3.75001H2.5V6.25001H5.41625L11.3462 20.4813C11.4412 20.709 11.6015 20.9034 11.8068 21.0402C12.0121 21.177 12.2533 21.25 12.5 21.25H22.5C23.0212 21.25 23.4875 20.9263 23.6712 20.44L27.4212 10.44C27.4921 10.2508 27.5161 10.0472 27.491 9.84669C27.466 9.64619 27.3927 9.45474 27.2775 9.28876ZM21.6337 18.75H13.3337L10.2087 11.25H24.4462L21.6337 18.75Z"
+          fill="black" />
+        <path
+          d="M13.125 26.25C14.1605 26.25 15 25.4105 15 24.375C15 23.3395 14.1605 22.5 13.125 22.5C12.0895 22.5 11.25 23.3395 11.25 24.375C11.25 25.4105 12.0895 26.25 13.125 26.25Z"
+          fill="black" />
+        <path
+          d="M21.875 26.25C22.9105 26.25 23.75 25.4105 23.75 24.375C23.75 23.3395 22.9105 22.5 21.875 22.5C20.8395 22.5 20 23.3395 20 24.375C20 25.4105 20.8395 26.25 21.875 26.25Z"
+          fill="black" />
+      </svg>
+    </div>
+    <div class="linha-carrinho"></div>
+
+    <form class="cardapio" action="produto.php" method="post">
+
+      <!-- <section> -->
+      <div class="produtos-carrinho">
+
+        <div class="produtos-carrinho-start">
+          <div class="infos-produto">
+            <h2>[nome do produto]</h2>
+            <h2>Quantidade: [quantidade]</h2>
+          </div>
+
+          <div class="valor-produto">
+            <h2>R$ [valor do produto]</h2>
+            <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.7114 0.932065C18.213 1.01618 16.8816 1.433 15.654 2.05352C11.7567 4.023 8.89858 8.04762 5.00145 10.0174C4.02409 10.5114 2.98205 10.8759 1.84143 11.047C1.71331 11.0662 1.59454 11.1047 1.48696 11.1591C0.942435 11.4343 0.688463 12.1139 0.996488 12.7233L6.28172 23.1797C6.49212 23.596 6.92029 23.8748 7.36859 23.8493C8.86712 23.7656 10.1985 23.3487 11.4262 22.7282C15.3233 20.7584 18.1817 16.7336 22.0788 14.7638C23.0562 14.2698 24.0982 13.9053 25.2389 13.7343C25.367 13.7151 25.4858 13.6765 25.5933 13.6222C26.1379 13.3469 26.3918 12.6674 26.0838 12.058L20.7988 1.60189C20.5879 1.18546 20.1599 0.906899 19.7114 0.932065V0.932065ZM2.87189 12.6613C3.59245 12.5056 4.29904 12.2531 5.00513 11.9525C5.30869 13.0152 4.8601 14.1585 3.87926 14.6543L2.87189 12.6613ZM7.6197 22.0544L6.82373 20.4797C7.9112 19.93 9.24541 20.384 9.86239 21.4844C9.11938 21.7851 8.37807 21.9736 7.6197 22.0544V22.0544ZM15.1393 15.5549C13.7412 16.2616 11.8919 15.4174 11.0089 13.6703C10.1256 11.9228 10.5429 9.9334 11.9408 9.22685C13.3387 8.52029 15.188 9.364 16.0713 11.1115C16.9547 12.8593 16.5369 14.8485 15.1393 15.5549ZM24.2083 12.1205C23.5808 12.256 22.9643 12.4658 22.349 12.711C22.1002 11.7576 22.4548 10.7591 23.2467 10.2181L24.2083 12.1205ZM20.2749 4.33864C19.2324 4.70379 18.0444 4.23713 17.4837 3.20259C18.1381 2.96162 18.7927 2.79876 19.4605 2.7273L20.2749 4.33864Z"
+                fill="#124A15" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="imagem-produto">
+          <img src="../../assets/destaques/destaques_3.jpg" alt="">
+        </div>
+
+      </div>
+
+      <!-- <div class="produtos">
+          <?php
+                        $sql_lanches = "SELECT id_cardapio, nome_produto, descricao_produto, preco_produto FROM `cardapio`
+                        WHERE id_categoria = 1 OR id_categoria = 2 OR id_categoria = 3 OR id_categoria = 4
+                        ORDER BY id_categoria, nome_produto ASC";
+                        $lanches = mysqli_query($conn, $sql_lanches);
+                        
+                        while ($linha_lanche = mysqli_fetch_assoc($lanches)) {
+                            # inserindo cada produto do cardápio e suas informações
+                            fillMenu($conn, $linha_lanche);
+                        }
+                    ?>
+        </div>
+      </section> -->
+
+      <!-- <section> -->
+      <div class="produtos-carrinho">
+
+        <div class="produtos-carrinho-start">
+          <div class="infos-produto">
+            <h2>[nome do produto]</h2>
+            <h2>Quantidade: [quantidade]</h2>
+          </div>
+
+          <div class="valor-produto">
+            <h2>R$ [valor do produto]</h2>
+            <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.7114 0.932065C18.213 1.01618 16.8816 1.433 15.654 2.05352C11.7567 4.023 8.89858 8.04762 5.00145 10.0174C4.02409 10.5114 2.98205 10.8759 1.84143 11.047C1.71331 11.0662 1.59454 11.1047 1.48696 11.1591C0.942435 11.4343 0.688463 12.1139 0.996488 12.7233L6.28172 23.1797C6.49212 23.596 6.92029 23.8748 7.36859 23.8493C8.86712 23.7656 10.1985 23.3487 11.4262 22.7282C15.3233 20.7584 18.1817 16.7336 22.0788 14.7638C23.0562 14.2698 24.0982 13.9053 25.2389 13.7343C25.367 13.7151 25.4858 13.6765 25.5933 13.6222C26.1379 13.3469 26.3918 12.6674 26.0838 12.058L20.7988 1.60189C20.5879 1.18546 20.1599 0.906899 19.7114 0.932065V0.932065ZM2.87189 12.6613C3.59245 12.5056 4.29904 12.2531 5.00513 11.9525C5.30869 13.0152 4.8601 14.1585 3.87926 14.6543L2.87189 12.6613ZM7.6197 22.0544L6.82373 20.4797C7.9112 19.93 9.24541 20.384 9.86239 21.4844C9.11938 21.7851 8.37807 21.9736 7.6197 22.0544V22.0544ZM15.1393 15.5549C13.7412 16.2616 11.8919 15.4174 11.0089 13.6703C10.1256 11.9228 10.5429 9.9334 11.9408 9.22685C13.3387 8.52029 15.188 9.364 16.0713 11.1115C16.9547 12.8593 16.5369 14.8485 15.1393 15.5549ZM24.2083 12.1205C23.5808 12.256 22.9643 12.4658 22.349 12.711C22.1002 11.7576 22.4548 10.7591 23.2467 10.2181L24.2083 12.1205ZM20.2749 4.33864C19.2324 4.70379 18.0444 4.23713 17.4837 3.20259C18.1381 2.96162 18.7927 2.79876 19.4605 2.7273L20.2749 4.33864Z"
+                fill="#124A15" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="imagem-produto">
+          <img src="../../assets/destaques/destaques_7.jpg" alt="">
+        </div>
+
+      </div>
+
+      <div class="linha-carrinho"></div>
+
+      <div class="valor-pedido">
+        <h2>Valor dos itens: <span style="color: #124A15;">[valor total dos produtos]</span></h2>
+        <h2>Taxa de entrega: <span style="color: #999999;">[valor da entrega]</span></h2>
+        <div>
+          <h2>Valor dos itens: <span style="color: #124A15;">[valor total do pedido]</span></h2>
+          <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.7114 0.932065C18.213 1.01618 16.8816 1.433 15.654 2.05352C11.7567 4.023 8.89858 8.04762 5.00145 10.0174C4.02409 10.5114 2.98205 10.8759 1.84143 11.047C1.71331 11.0662 1.59454 11.1047 1.48696 11.1591C0.942435 11.4343 0.688463 12.1139 0.996488 12.7233L6.28172 23.1797C6.49212 23.596 6.92029 23.8748 7.36859 23.8493C8.86712 23.7656 10.1985 23.3487 11.4262 22.7282C15.3233 20.7584 18.1817 16.7336 22.0788 14.7638C23.0562 14.2698 24.0982 13.9053 25.2389 13.7343C25.367 13.7151 25.4858 13.6765 25.5933 13.6222C26.1379 13.3469 26.3918 12.6674 26.0838 12.058L20.7988 1.60189C20.5879 1.18546 20.1599 0.906899 19.7114 0.932065V0.932065ZM2.87189 12.6613C3.59245 12.5056 4.29904 12.2531 5.00513 11.9525C5.30869 13.0152 4.8601 14.1585 3.87926 14.6543L2.87189 12.6613ZM7.6197 22.0544L6.82373 20.4797C7.9112 19.93 9.24541 20.384 9.86239 21.4844C9.11938 21.7851 8.37807 21.9736 7.6197 22.0544V22.0544ZM15.1393 15.5549C13.7412 16.2616 11.8919 15.4174 11.0089 13.6703C10.1256 11.9228 10.5429 9.9334 11.9408 9.22685C13.3387 8.52029 15.188 9.364 16.0713 11.1115C16.9547 12.8593 16.5369 14.8485 15.1393 15.5549ZM24.2083 12.1205C23.5808 12.256 22.9643 12.4658 22.349 12.711C22.1002 11.7576 22.4548 10.7591 23.2467 10.2181L24.2083 12.1205ZM20.2749 4.33864C19.2324 4.70379 18.0444 4.23713 17.4837 3.20259C18.1381 2.96162 18.7927 2.79876 19.4605 2.7273L20.2749 4.33864Z"
+              fill="#124A15" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- <div class="produtos">
+            <?php
+                      $sql_bebidas = "SELECT id_cardapio, nome_produto, descricao_produto, preco_produto FROM `cardapio`
+                      WHERE id_categoria = 6 OR id_categoria = 7
+                      ORDER BY id_categoria, nome_produto ASC";
+                      $bebidas = mysqli_query($conn, $sql_bebidas);
+                      
+                      while ($linha_bebida = mysqli_fetch_assoc($bebidas)) {
+                          # inserindo cada produto do cardápio e suas informações
+                          fillMenu($conn, $linha_bebida);
+                      }
+                  ?>
+          </div>
+        </section> -->
+
+      <!-- <section>
+          <div class="produtos">
+            <?php
+                      $sql_sobremesas = "SELECT id_cardapio, nome_produto, descricao_produto, preco_produto FROM `cardapio`
+                      WHERE id_categoria = 5
+                      ORDER BY id_categoria, nome_produto ASC";
+                      $sobremesa = mysqli_query($conn, $sql_sobremesas);
+                      
+                      while ($linha_sobremesa = mysqli_fetch_assoc($sobremesa)) {
+                          # inserindo cada produto do cardápio e suas informações
+                          fillMenu($conn, $linha_sobremesa);
+                      }
+                  ?>
+          </div>
+        </section> -->
+
+    </form>
+
+  </main>
+
+  <script>
+    if (screen.width < 540) {
+      document.querySelectorAll('.destaques-tile')[3].style.backgroundSize = "200%"
+    }
+    if (screen.width < 360) {
+      document.querySelectorAll('.destaques-tile')[3].style.backgroundSize = "300%"
+    }
+  </script>
+  <script src="../scripts/dinheiro.js"></script>
+  <script>
+    const produtos = document.querySelectorAll('.produto-wrapper')
+
+    for (let index = 0; index < produtos.length; index++) {
+      produtos[index].addEventListener('click', () => {
+        document.querySelector('form').submit()
+      })
+    }
+  </script>
+  <script>
+    let navButton = document.querySelectorAll('nav a')
+    navButton[0].innerHTML = `<div>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27.6371 14.4536L15.0385 0.443421C14.508 -0.147807 13.4889 -0.147807 12.9583 0.443421L0.359737 14.4536C0.178396 14.6548 0.0593652 14.9043 0.0171174 15.172C-0.0251305 15.4396 0.011225 15.7137 0.121764 15.9611C0.345739 16.4668 0.846883 16.7919 1.39982 16.7919H4.19951V26.599C4.19951 26.9706 4.34699 27.3269 4.60951 27.5897C4.87203 27.8524 5.22809 28 5.59935 28H9.79888C10.1701 28 10.5262 27.8524 10.7887 27.5897C11.0512 27.3269 11.1987 26.9706 11.1987 26.599V20.9949H16.7981V26.599C16.7981 26.9706 16.9456 27.3269 17.2081 27.5897C17.4706 27.8524 17.8267 28 18.1979 28H22.3975C22.7687 28 23.1248 27.8524 23.3873 27.5897C23.6498 27.3269 23.7973 26.9706 23.7973 26.599V16.7919H26.597C26.8681 16.793 27.1337 16.7152 27.3614 16.5679C27.589 16.4206 27.769 16.2102 27.8792 15.9623C27.9895 15.7144 28.0253 15.4398 27.9823 15.1719C27.9393 14.904 27.8194 14.6544 27.6371 14.4536V14.4536Z" fill="black"/>
+            </svg>
+          </div>
+        Início`
+    navButton[0].style.color = "black"
+  </script>
+</body>
+
+</html>
