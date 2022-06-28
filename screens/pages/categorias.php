@@ -1,6 +1,7 @@
 <?php
   include('../../functions.inc.php');
   userIsLogged();
+  resetCurrentProduct();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

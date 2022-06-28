@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Faça login</h1>
-    <a href="index.html" id="back">
+    <a href="startpage.html" id="back">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 5L9 10L14 15L13 17L6 10L13 3L14 5Z" fill="black"/>
         </svg>
@@ -52,7 +52,7 @@
             if (mysqli_num_rows($result) > 0) { // caso o login seja sucedido, redirecione
               session_start();
               $_SESSION['user'] = mysqli_fetch_assoc($result)['id_usuario']; // guarda a sessão com o id do usuário
-              header("Location: inicio.php");
+              header("Location: index.php");
             } else {
               echo "<script>document.querySelector('#form-text').textContent = 'E-mail ou senha inválidos'
               document.querySelector('#email-input').value = '$email'</script>";

@@ -160,7 +160,7 @@ nav li {
 
     border: #FFF 2px solid;
     border-radius: 5px;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +182,7 @@ nav li {
 #ver-destaques {
     display: flex;
     align-items: center;
-    
+
     background-color: transparent;
     border: none;
     padding-bottom: 11px;
@@ -435,7 +435,7 @@ nav li {
     font-weight: 400;
     font-size: 11pt;
     color: #777777;
-    
+
     margin-top: 15px;
     margin-bottom: 70px;
 }
@@ -455,7 +455,7 @@ nav li {
     align-items: center;
     justify-content: space-evenly;
 
-    
+
     border-bottom: 2px black solid;
 }
 
@@ -553,6 +553,7 @@ nav li {
     #login-body {
         background-size: 200%;
     }
+
     .destaques-tile {
         background-size: 140%;
     }

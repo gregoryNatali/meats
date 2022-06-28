@@ -1,6 +1,7 @@
 <?php
   include('../../functions.inc.php');
   userIsLogged();
+  noProductFallback();
   require_once('../../dbconnect.php');
 ?>
 <!DOCTYPE html>
@@ -19,21 +20,39 @@
     <!--Barra de navegação-->
     <?php include('navbar.html'); ?>
     <main>
-        <div class="main-div">
-            <!--Título-->
+        <form method="post">
+          <div class="main-div">
             <h1>Adicione uma observação:</h1>
             <div id="adicionar_observacao">
-                <label for="input_observacao">
-                    <div class="barra_observacao">
-                        <input id="input_observacao" type="text" maxlength="100" placeholder="Digite algo...">
-                        <div class="horizontal-line"></div>
-                    </div>
-                    <p id="input-counter">100</p>
-                </label>
+              <label for="input_observacao">
+                <div class="barra_observacao">
+                  <input id="input_observacao" name="observacao" type="text" maxlength="100" placeholder="Digite algo..." required>
+                  <div class="horizontal-line"></div>
+                </div>
+                <p id="input-counter"></p>
+              </label>
             </div>
-        </div>
-        <a href="produto.php"><button type="submit">Adicionar</button></a>
+          </div>
+          <button type="submit">Adicionar</button>
+        </form>
     </main>
-    
+    <?php
+
+      if (isset($_SESSION['observacao'])) {
+        echo "<script>document.querySelector('#input_observacao').value = '" . $_SESSION['observacao'] . "'</script>";
+      }
+
+      echo "<script>
+        let observacao = document.querySelector('#input_observacao').value
+        const counter = document.querySelector('#input-counter')
+        counter.textContent = 100 - observacao.length
+      </script>";
+
+      if (isset($_POST['observacao'])) {
+        $_SESSION['observacao'] = $_POST['observacao'];
+        echo "<script>window.location = 'produto.php'</script>";
+      }
+
+    ?>
   <script src="../scripts/observacao.js"></script>
 </body>

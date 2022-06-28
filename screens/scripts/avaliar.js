@@ -1,4 +1,16 @@
 const starsDiv = document.querySelector('#estrelas')
+const submitButton = document.querySelector('#enviar-nota')
+
+// submitButton.addEventListener('click', (e) => {
+//     e.preventDefault()
+
+//     if (submitButton.getAttribute('value') != null) {
+//         document.querySelector('form').submit()
+//         return
+//     }
+// })
+
+// não tá mandando pro PHP porque as estrelas não têm um input de radio. temos que adicionar eles
 
 for (let star = 0; star < 5; star++) {
     starsDiv.innerHTML += `<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,5 +28,6 @@ for (let star = 0; star < 5; star++) {
         for (let index = 0; index < nota; index++) {
             starsDiv.children[index].style.fill = "#D79B00"
         }
+        submitButton.setAttribute('value', nota)
     })
 }

@@ -4,7 +4,7 @@ h1 {
     font-weight: 500;
 }
 
-main {
+form {
     display: flex;
     flex-direction: column;
     
@@ -26,6 +26,7 @@ a {
 button {
     width: 170px;
     height: 40px;
+    margin-top: 50px;
     
     font-size: 11pt;
     font-family: 'Outfit';

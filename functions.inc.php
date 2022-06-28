@@ -2,7 +2,24 @@
     function userIsLogged() {
         session_start();
         if (!isset($_SESSION['user'])) { // caso o usuario não esteja logado, redirecione para o index
-            return header("Location: index.html");
+            return header("Location: startpage.html");
+        }
+    }
+
+    function resetCurrentProduct() { // redefine o valor do produto atual e da observação, caso o usuário saia da tela de produto
+        if (isset($_SESSION['produto'])) {
+            unset($_SESSION['produto']);
+        }
+
+        if (isset($_SESSION['observacao'])) {
+            unset($_SESSION['observacao']);
+        }
+    }
+
+    function noProductFallback() { // caso o usuário vá para uma das páginas principais e tenta voltar para a tela de produto/avaliar/obs
+        if (!isset($_SESSION['produto'])) {
+            echo "<script>window.location = 'index.php'</script>";
+            die;
         }
     }
 
@@ -59,7 +76,7 @@
 
     function loadProductImage($conn, $id) {
         $sql = "SELECT * FROM produto_imagem WHERE id_produto = $id";
-        $imagem = mysqli_fetch_assoc(mysqli_query($conn, $sql))['imagem'];
-        return 'background-image: url(\'data:image/jpeg;base64,' . base64_encode($imagem) . '\');';
+        $imagem = mysqli_fetch_assoc(mysqli_query($conn, $sql))['imagem']; // pega o BLOB do banco
+        return 'background-image: url(\'data:image/jpeg;base64,' . base64_encode($imagem) . '\');'; // converte em imagem
     }
 ?>

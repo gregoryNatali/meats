@@ -1,6 +1,7 @@
 <?php
   include('../../functions.inc.php');
   userIsLogged();
+  resetCurrentProduct();
   require_once('../../dbconnect.php');
 ?>
 <!DOCTYPE html>
@@ -50,7 +51,7 @@
       <?php
         if (isset($_POST['logout'])) {
           unset($_SESSION['user']);
-          echo "<script>window.location = 'index.html'</script>";
+          echo "<script>window.location = 'startpage.html'</script>";
         }
       ?>
       <div class="user-settings">

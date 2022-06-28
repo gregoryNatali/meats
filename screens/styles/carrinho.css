@@ -1,0 +1,96 @@
+.carrinho {
+  width: 100%;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.carrinho svg {
+  margin-left: 15px;
+}
+
+.linha-carrinho {
+  background-color: #000;
+  height: 1px;
+  width: 50rem;
+}
+
+.produtos-carrinho {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  margin-bottom: 1.5rem;
+  border-bottom: 1px dashed black;
+}
+
+.produtos-carrinho-start {
+  display: flex;
+  flex-direction: column;
+}
+
+.infos-produto {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  padding: 0.5rem 0 0.5rem 0;
+  margin-bottom: 1.25rem;
+}
+
+.infos-produto h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.valor-produto {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1.25rem;
+}
+
+.valor-produto h2 {
+  color: #124A15;
+
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 1.55rem;
+}
+
+.imagem-produto {
+  margin-bottom: 1.25rem;
+}
+
+.imagem-produto img {
+  width: 15rem;
+}
+
+.valor-pedido {
+  margin-top: 1.25rem;
+}
+
+.valor-pedido h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 1.1669rem;
+
+  margin-top: 0.55rem;
+}
+
+.valor-pedido div {
+  display: flex;
+  align-items: center;
+}

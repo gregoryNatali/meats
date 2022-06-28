@@ -1,6 +1,7 @@
 <?php
   include('../../functions.inc.php');
   userIsLogged();
+  resetCurrentProduct();
   require_once('../../dbconnect.php');
 ?>
 <!DOCTYPE html>

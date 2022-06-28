@@ -1,6 +1,7 @@
 <?php
   include('../../functions.inc.php');
   userIsLogged();
+  noProductFallback();
   require_once('../../dbconnect.php');
 ?>
 <!DOCTYPE html>
@@ -19,13 +20,23 @@
     <!--Barra de navegação-->
     <?php include('navbar.html'); ?>
     <main>
-      <div>
-        <!--Título-->
+      <form method="post">
         <h1>Qual é a nota que você dá para este produto?</h1>
-        <div id="estrelas"></div>
-      </div>
-        <a href="produto.php"><button type="submit">Avaliar</button></a>
+        <div id="estrelas" required></div>
+        <div class="button">
+          <button id="enviar-nota" name="enviar_nota" type="submit">Avaliar</button>
+        </div>
+      </form>
     </main>
-  
     <script src="../scripts/avaliar.js"></script>
+    <?php
+      $id_cardapio = $_SESSION['produto'];
+      if (isset($_POST['enviar_nota'])) {
+        $nota = $_POST['enviar_nota']; // nota para enviar no banco
+        
+        echo "<script>
+          window.location = 'produto.php'
+        </script>";
+      }
+    ?>
 </body>
