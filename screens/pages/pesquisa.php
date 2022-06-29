@@ -37,7 +37,10 @@
     </head>
     <body>
         <!--Barra de navegação-->
-        <?php include('navbar.html'); ?>
+        <?php
+            include('navbar.html');
+            myCartButton();
+        ?>
         <main>
             <!--Barra de pesquisa + filtro-->
             <div id="pesquisa_filtro">

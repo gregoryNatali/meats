@@ -79,6 +79,47 @@ nav li {
     font-weight: 400;
 }
 
+/* Carrinho */
+
+.link-carrinho {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+    position: fixed;
+    bottom: 10vh;
+}
+
+.meu-carrinho-wrapper {
+    height: 40px;
+    
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+}
+
+.meu-carrinho {
+    width: 90%;
+    height: 85%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: #000 solid 2px;
+    border-radius: 5px;
+}
+
+.meu-carrinho span {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
 /* fim dos estilos globais */
 
 

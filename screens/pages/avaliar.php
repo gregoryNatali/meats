@@ -18,7 +18,10 @@
 
 <body>
     <!--Barra de navegação-->
-    <?php include('navbar.html'); ?>
+    <?php
+      include('navbar.html');
+      myCartButton();
+    ?>
     <main>
       <form method="post">
         <h1>Qual é a nota que você dá para este produto?</h1>

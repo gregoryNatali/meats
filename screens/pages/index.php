@@ -32,7 +32,10 @@
 
 <body>
   <!--Barra de navegação-->
-  <?php include('navbar.html'); ?>
+  <?php
+    include('navbar.html');
+    myCartButton();
+  ?>
   <main>
     
     <!--Título-->

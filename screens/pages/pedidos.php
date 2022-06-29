@@ -16,7 +16,10 @@
     </head>
     <body>
         <!--Barra de navegação-->
-        <?php include('navbar.html'); ?>
+        <?php
+            include('navbar.html');
+            myCartButton();
+        ?>
         <main>
             <div class="body-bg">    
                 <div id="square">Meus Pedidos</div>

@@ -18,7 +18,10 @@
 
 <body>
     <!--Barra de navegação-->
-    <?php include('navbar.html'); ?>
+    <?php
+      include('navbar.html');
+      myCartButton();
+    ?>
     <main>
         <form method="post">
           <div class="main-div">

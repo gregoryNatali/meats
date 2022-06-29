@@ -80,7 +80,15 @@ a {
 }
 
 #numero-quant {
+    width: 20px;
     margin: 0 8px 0 8px;
+
+    border: none;
+
+    font-size: 12pt;
+    font-family: 'Outfit', Arial;
+    text-align: center;
+
     user-select: none;
 }
 

@@ -17,7 +17,10 @@
 
   <body id="user-body">
     <!--Barra de navegação-->
-    <?php include('navbar.html'); ?>
+    <?php
+      include('navbar.html');
+      myCartButton();
+    ?>
     <main>
       <div class="top-bar">
         <div style="margin-left: 5vw">
@@ -50,7 +53,7 @@
 
       <?php
         if (isset($_POST['logout'])) {
-          unset($_SESSION['user']);
+          session_unset();
           echo "<script>window.location = 'startpage.html'</script>";
         }
       ?>
