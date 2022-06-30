@@ -62,9 +62,9 @@
           $id_produto = $_SESSION['produto'];
 
           $item_pedido = [
-            $id_produto,
-            $quant,
-            $obs
+            'id' => $id_produto,
+            'quant' => $quant,
+            'obs' => $obs
           ];
 
           $pedido = $item_pedido;
@@ -100,9 +100,9 @@
 
           for ($quant_produtos = 0; $quant_produtos < count($pedido); $quant_produtos++) { 
 
-              $sql_carrinho = "SELECT * FROM cardapio WHERE id_cardapio = " . $pedido[$quant_produtos][0];
+              $sql_carrinho = "SELECT * FROM cardapio WHERE id_cardapio = " . $pedido[$quant_produtos]['id'];
               $resultado_produto = mysqli_fetch_assoc(mysqli_query($conn, $sql_carrinho));
-              $preco = number_format($resultado_produto['preco_produto'] * $pedido[$quant_produtos][1], 2);
+              $preco = number_format($resultado_produto['preco_produto'] * $pedido[$quant_produtos]['quant'], 2);
               $preco_pedido += $preco;
 
               echo '<div class="produtos-carrinho">
@@ -110,9 +110,9 @@
                   <div class="produtos-carrinho-start">
                     <div class="infos-produto">
                       <h2 style="margin-bottom: 5px;">' . $resultado_produto['nome_produto'] . '</h2>
-                      <h2>Quantidade: <span style="margin-left: 5px;">' . $pedido[$quant_produtos][1] . '</span></h2>';
-              if ($pedido[$quant_produtos][2] != '') {
-                  echo '<h3>Obs.: <span style="color: rgb(50, 50, 50);">' . $pedido[$quant_produtos][2] . '</span></h3>';
+                      <h2>Quantidade: <span style="margin-left: 5px;">' . $pedido[$quant_produtos]['quant'] . '</span></h2>';
+              if ($pedido[$quant_produtos]['obs'] != '') {
+                  echo '<h3>Obs.: <span style="color: rgb(50, 50, 50);">' . $pedido[$quant_produtos]['obs'] . '</span></h3>';
               }
               echo '</div>
           

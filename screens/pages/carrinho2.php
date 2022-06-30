@@ -39,7 +39,7 @@
 
         $pedido = $_SESSION['pedido'];
         $taxa_entrega = number_format(3, 2);
-
+        $preco_total = number_format($_SESSION['preco_pedido'] + $taxa_entrega, 2);
     ?>
     <!--Título-->
     <div class="carrinho">
@@ -102,7 +102,7 @@
     </form>
       
 
-    <form class="cardapio" action="carrinho2.php">
+    <form class="cardapio" action="carrinho2.php" method="post">
 
         <div class="linha-carrinho"></div>
         
@@ -117,13 +117,13 @@
               <path d="M11.1281 0.578802C10.2956 0.62554 9.55579 0.857139 8.87367 1.20192C6.70821 2.29622 5.12014 4.53243 2.95477 5.62692C2.41172 5.90141 1.83273 6.10394 1.19896 6.19896C1.12778 6.20965 1.06178 6.23105 1.00201 6.26126C0.699453 6.41419 0.558338 6.79176 0.729486 7.13037L3.66613 12.9403C3.78304 13.1716 4.02094 13.3266 4.27003 13.3124C5.10267 13.2658 5.84243 13.0342 6.52455 12.6895C8.68992 11.595 10.2782 9.35866 12.4435 8.26417C12.9866 7.98968 13.5656 7.78716 14.1993 7.69214C14.2705 7.68145 14.3365 7.66004 14.3963 7.62983C14.6988 7.4769 14.84 7.09933 14.6688 6.76073L11.7323 0.950979C11.6151 0.719594 11.3773 0.564819 11.1281 0.578802ZM1.77152 7.09592C2.17189 7.00943 2.56449 6.86915 2.95682 6.70212C3.12548 7.29258 2.87624 7.92783 2.33125 8.2033L1.77152 7.09592ZM4.40956 12.3151L3.96729 11.4401C4.57153 11.1347 5.31285 11.3869 5.65567 11.9984C5.24283 12.1654 4.83093 12.2702 4.40956 12.3151ZM8.58771 8.70372C7.81084 9.09639 6.78336 8.62733 6.29268 7.65657C5.80192 6.68562 6.03381 5.58024 6.81051 5.18765C7.58721 4.79507 8.61477 5.26386 9.10553 6.2348C9.59639 7.20593 9.36423 8.31122 8.58771 8.70372ZM13.6267 6.79545C13.2781 6.87074 12.9355 6.98733 12.5936 7.12358C12.4554 6.59382 12.6524 6.03902 13.0924 5.73843L13.6267 6.79545ZM11.4412 2.47161C10.862 2.67449 10.2018 2.4152 9.89032 1.84038C10.2539 1.70649 10.6176 1.616 10.9887 1.57629L11.4412 2.47161Z" fill="#124A15"/>
             </svg>
           </h2>
-          <h2>Valor total: <span class="valor_dinheiro" style="color: #124A15;">R$ <?php echo number_format($_SESSION['preco_pedido'] + $taxa_entrega, 2);?></span>
+          <h2>Valor total: <span class="valor_dinheiro" style="color: #124A15;">R$ <?php echo $preco_total;?></span>
             <svg width="18" height="17" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.1281 0.578802C10.2956 0.62554 9.55579 0.857139 8.87367 1.20192C6.70821 2.29622 5.12014 4.53243 2.95477 5.62692C2.41172 5.90141 1.83273 6.10394 1.19896 6.19896C1.12778 6.20965 1.06178 6.23105 1.00201 6.26126C0.699453 6.41419 0.558338 6.79176 0.729486 7.13037L3.66613 12.9403C3.78304 13.1716 4.02094 13.3266 4.27003 13.3124C5.10267 13.2658 5.84243 13.0342 6.52455 12.6895C8.68992 11.595 10.2782 9.35866 12.4435 8.26417C12.9866 7.98968 13.5656 7.78716 14.1993 7.69214C14.2705 7.68145 14.3365 7.66004 14.3963 7.62983C14.6988 7.4769 14.84 7.09933 14.6688 6.76073L11.7323 0.950979C11.6151 0.719594 11.3773 0.564819 11.1281 0.578802ZM1.77152 7.09592C2.17189 7.00943 2.56449 6.86915 2.95682 6.70212C3.12548 7.29258 2.87624 7.92783 2.33125 8.2033L1.77152 7.09592ZM4.40956 12.3151L3.96729 11.4401C4.57153 11.1347 5.31285 11.3869 5.65567 11.9984C5.24283 12.1654 4.83093 12.2702 4.40956 12.3151ZM8.58771 8.70372C7.81084 9.09639 6.78336 8.62733 6.29268 7.65657C5.80192 6.68562 6.03381 5.58024 6.81051 5.18765C7.58721 4.79507 8.61477 5.26386 9.10553 6.2348C9.59639 7.20593 9.36423 8.31122 8.58771 8.70372ZM13.6267 6.79545C13.2781 6.87074 12.9355 6.98733 12.5936 7.12358C12.4554 6.59382 12.6524 6.03902 13.0924 5.73843L13.6267 6.79545ZM11.4412 2.47161C10.862 2.67449 10.2018 2.4152 9.89032 1.84038C10.2539 1.70649 10.6176 1.616 10.9887 1.57629L11.4412 2.47161Z" fill="#124A15"/>
             </svg>
           </h2>
         </div>
-        <button id="continuar">
+        <button id="continuar" name="finalizar_pedido">
           <span>Finalizar pedido</span>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_747_192)">
@@ -136,23 +136,55 @@
             </defs>
           </svg>
 
-
         </button>
         
     </form>
 
+    <?php
+
+        echo '<script src="../scripts/dinheiro.js"></script>';
+
+        if (isset($_POST['finalizar_pedido'])) {
+            
+            $troco = 100; // apenas para exemplo
+            // $troco = $_POST['troco'];
+            $id_usuario = $_SESSION['user'];
+
+            $sql_pedido = "INSERT INTO `pedido`(`id_usuario`, `custo_pedido`, `troco_usuario`, `concluido`)
+            VALUES ($id_usuario, $preco_total, $troco, 0)";
+
+            mysqli_query($conn, $sql_pedido);
+            
+            $get_id_sql = "SELECT `id_pedido` FROM `pedido` WHERE `id_usuario` = $id_usuario && `concluido` = 0
+            ORDER BY `id_pedido` DESC
+            LIMIT 1";
+
+            $id_pedido = mysqli_fetch_assoc(mysqli_query($conn, $get_id_sql))['id_pedido']; // pega o id do pedido que acabou de acontecer
+
+            for ($i=0; $i < count($_SESSION['pedido']); $i++) { 
+                $id_cardapio = $_SESSION['pedido'][$i]['id'];
+                $quant = $_SESSION['pedido'][$i]['quant'];
+                $obs = $_SESSION['pedido'][$i]['obs'];
+
+                if ($obs != '') {
+                  $sql_itens_pedido = "INSERT INTO `itens_pedido` (`id_pedido`, `id_cardapio`, `observacao_pedido`, `quantidade_produto`)
+                  VALUES ($id_pedido, $id_cardapio, '$obs', $quant)";
+                } else {
+                  $sql_itens_pedido = "INSERT INTO `itens_pedido` (`id_pedido`, `id_cardapio`, `observacao_pedido`, `quantidade_produto`)
+                  VALUES ($id_pedido, $id_cardapio, NULL, $quant)";
+                }
+
+                mysqli_query($conn, $sql_itens_pedido); // insere os itens do pedido na tabela itens_pedido
+            }
+
+            unset($_SESSION['pedido'], $_SESSION['preco_pedido']); // encerra o pedido atual
+
+            echo "<script>window.location = 'pedidos.php'</script>";
+        }
+      
+    ?>
   </main>
 
-  <script src="../scripts/dinheiro.js"></script>
-  <script>
-    const produtos = document.querySelectorAll('.produto-wrapper')
-
-    for (let index = 0; index < produtos.length; index++) {
-      produtos[index].addEventListener('click', () => {
-        document.querySelector('form').submit()
-      })
-    }
-  </script>
 </body>
 
 </html>

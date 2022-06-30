@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Tempo de geração: 30-Jun-2022 às 15:53
+-- Tempo de geração: 30-Jun-2022 às 22:07
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -110,11 +110,28 @@ INSERT INTO `entregador` (`id_entregador`, `nome_entregador`, `esta_disponivel`)
 --
 
 CREATE TABLE `itens_pedido` (
+  `id_item_pedido` int(11) NOT NULL,
   `id_pedido` int(11) NOT NULL,
   `id_cardapio` int(11) NOT NULL,
   `observacao_pedido` varchar(100) DEFAULT NULL,
   `quantidade_produto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `itens_pedido`
+--
+
+INSERT INTO `itens_pedido` (`id_item_pedido`, `id_pedido`, `id_cardapio`, `observacao_pedido`, `quantidade_produto`) VALUES
+(1, 1, 2, 'Gostaria sem picles', 2),
+(2, 1, 4, NULL, 1),
+(3, 1, 11, NULL, 2),
+(4, 2, 8, NULL, 1),
+(5, 2, 9, NULL, 1),
+(6, 3, 1, 'Gostaria sem mostarda', 1),
+(7, 3, 1, NULL, 1),
+(8, 3, 5, NULL, 1),
+(9, 4, 13, NULL, 1),
+(10, 4, 9, 'Quero pouco gelo na bebida', 1);
 
 -- --------------------------------------------------------
 
@@ -139,11 +156,21 @@ CREATE TABLE `pedido` (
   `id_usuario` int(11) NOT NULL,
   `custo_pedido` float NOT NULL,
   `troco_usuario` float DEFAULT NULL,
-  `id_entregador` int(11) NOT NULL,
+  `id_entregador` int(11) DEFAULT NULL,
   `concluido` tinyint(1) NOT NULL,
   `hora_pedido` timestamp NOT NULL DEFAULT current_timestamp(),
   `hora_entrega` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `pedido`
+--
+
+INSERT INTO `pedido` (`id_pedido`, `id_usuario`, `custo_pedido`, `troco_usuario`, `id_entregador`, `concluido`, `hora_pedido`, `hora_entrega`) VALUES
+(1, 6, 46.95, 100, NULL, 0, '2022-06-30 19:55:00', NULL),
+(2, 7, 34.98, 100, NULL, 0, '2022-06-30 19:56:41', NULL),
+(3, 3, 21.97, 100, NULL, 0, '2022-06-30 19:59:50', NULL),
+(4, 3, 33.98, 100, NULL, 0, '2022-06-30 20:02:30', NULL);
 
 -- --------------------------------------------------------
 
@@ -234,6 +261,7 @@ ALTER TABLE `entregador`
 -- Índices para tabela `itens_pedido`
 --
 ALTER TABLE `itens_pedido`
+  ADD PRIMARY KEY (`id_item_pedido`),
   ADD KEY `id_pedido` (`id_pedido`),
   ADD KEY `id_cardapio` (`id_cardapio`);
 
@@ -287,10 +315,16 @@ ALTER TABLE `entregador`
   MODIFY `id_entregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de tabela `itens_pedido`
+--
+ALTER TABLE `itens_pedido`
+  MODIFY `id_item_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT de tabela `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `produto_imagem`
