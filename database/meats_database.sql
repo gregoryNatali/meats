@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Tempo de geração: 28-Jun-2022 às 22:57
+-- Tempo de geração: 30-Jun-2022 às 15:53
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -34,28 +34,27 @@ CREATE TABLE `cardapio` (
   `descricao_produto` varchar(250) NOT NULL,
   `peso_produto` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
-  `e_destaque` tinyint(1) NOT NULL,
-  `imagem_produto` longblob DEFAULT NULL
+  `e_destaque` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `cardapio`
 --
 
-INSERT INTO `cardapio` (`id_cardapio`, `nome_produto`, `preco_produto`, `descricao_produto`, `peso_produto`, `id_categoria`, `e_destaque`, `imagem_produto`) VALUES
-(1, 'Hambúrguer ', 7.99, 'Pão, hambúrguer e picles com ketchup e mostarda', 90, 1, 0, NULL),
-(2, 'Hambúrguer Duplo', 12.99, 'Dois pães, dois hambúrgueres, picles e condimentos', 150, 1, 0, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(3, 'Hambúrguer Veggie', 15.99, 'Pão vegano e hambúrguer feito de proteína de soja', 90, 2, 1, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(4, 'Batata Frita', 5.99, 'Deliciosas batatas selecionadas, fritas e crocantes', 400, 4, 0, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(5, 'Água Mineral', 2.99, 'Água sem gás', 500, 6, 0, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(6, 'Sundae ', 8.99, 'Sorvete de baunilha com cobertura de chocolate ', 200, 5, 0, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(7, 'Casquinha', 3.99, 'Sorvete de baunilha em uma casquinha crocante', 90, 5, 0, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(8, 'Hambúrguer com Queijo Triplo', 14.99, 'Um hambúrguer (100% carne bovina), queijo cheddar', 200, 3, 0, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(9, 'Drink de morango', 16.99, 'Vodka, pedras de gelo, leite condensado e morango', 500, 7, 1, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(10, 'Porção de camarão e fritas', 39.99, '250g de batata e 250g de camarão', 500, 4, 1, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(11, 'Pepsi Lata', 5.99, 'Uma lata de Pepsi ', 350, 6, 1, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(12, 'Steak Power com Fritas e Onion Rings', 19.99, 'Hambúrguer gormet acompanhado por batatas e onion rings', 500, 3, 1, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765),
-(13, 'Chicken Dream', 13.99, 'Hambúrguer de frango  ', 400, 1, 1, 0x42756c6b436f6c756d6e2066726f6d204f70656e726f77736574202842756c6b2027433a78616d70706874646f63736d65617473617373657473636172646170696f312e6a706567272c2053696e676c655f426c6f622920617320496d616765);
+INSERT INTO `cardapio` (`id_cardapio`, `nome_produto`, `preco_produto`, `descricao_produto`, `peso_produto`, `id_categoria`, `e_destaque`) VALUES
+(1, 'Hambúrguer ', 7.99, 'Pão, hambúrguer e picles com ketchup e mostarda', 90, 1, 0),
+(2, 'Hambúrguer Duplo', 12.99, 'Dois pães, dois hambúrgueres, picles e condimentos', 150, 1, 0),
+(3, 'Hambúrguer Veggie', 15.99, 'Pão vegano e hambúrguer feito de proteína de soja', 90, 2, 1),
+(4, 'Batata Frita', 5.99, 'Deliciosas batatas selecionadas, fritas e crocantes', 400, 4, 0),
+(5, 'Água Mineral', 2.99, 'Água sem gás', 500, 6, 0),
+(6, 'Sundae ', 8.99, 'Sorvete de baunilha com cobertura de chocolate ', 200, 5, 0),
+(7, 'Casquinha', 3.99, 'Sorvete de baunilha em uma casquinha crocante', 90, 5, 0),
+(8, 'Hambúrguer com Queijo Triplo', 14.99, 'Um hambúrguer (100% carne bovina), queijo cheddar', 200, 3, 0),
+(9, 'Drink de morango', 16.99, 'Vodka, pedras de gelo, leite condensado e morango', 500, 7, 1),
+(10, 'Porção de camarão e fritas', 39.99, '250g de batata e 250g de camarão', 500, 4, 1),
+(11, 'Pepsi Lata', 5.99, 'Uma lata de Pepsi ', 350, 6, 1),
+(12, 'Steak Power com Fritas e Onion Rings', 19.99, 'Hambúrguer gormet acompanhado por batatas e onion rings', 500, 3, 1),
+(13, 'Chicken Dream', 13.99, 'Hambúrguer de frango  ', 400, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -107,30 +106,44 @@ INSERT INTO `entregador` (`id_entregador`, `nome_entregador`, `esta_disponivel`)
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `itens_pedido`
+--
+
+CREATE TABLE `itens_pedido` (
+  `id_pedido` int(11) NOT NULL,
+  `id_cardapio` int(11) NOT NULL,
+  `observacao_pedido` varchar(100) DEFAULT NULL,
+  `quantidade_produto` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `notas`
+--
+
+CREATE TABLE `notas` (
+  `id_cardapio` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `nota` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `pedido`
 --
 
 CREATE TABLE `pedido` (
   `id_pedido` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
-  `id_cardapio` int(11) NOT NULL,
-  `observacao_pedido` varchar(100) DEFAULT NULL,
+  `custo_pedido` float NOT NULL,
+  `troco_usuario` float DEFAULT NULL,
   `id_entregador` int(11) NOT NULL,
-  `quantidade_produto` int(11) NOT NULL,
-  `preco_x_quantidade` float NOT NULL,
   `concluido` tinyint(1) NOT NULL,
-  `hora_pedido` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `hora_entrega` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `hora_pedido` timestamp NOT NULL DEFAULT current_timestamp(),
+  `hora_entrega` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `pedido`
---
-
-INSERT INTO `pedido` (`id_pedido`, `id_usuario`, `id_cardapio`, `observacao_pedido`, `id_entregador`, `quantidade_produto`, `preco_x_quantidade`, `concluido`, `hora_pedido`, `hora_entrega`) VALUES
-(1, 2, 1, NULL, 1, 4, 31.96, 1, '2022-05-27 18:44:05', '2022-05-27 18:44:05'),
-(2, 2, 2, NULL, 3, 10, 129.9, 1, '2022-05-27 18:44:44', '2022-05-27 18:44:44'),
-(3, 1, 3, NULL, 3, 2, 31.98, 1, '2022-05-27 18:45:25', '2022-05-27 18:45:25');
 
 -- --------------------------------------------------------
 
@@ -218,13 +231,26 @@ ALTER TABLE `entregador`
   ADD PRIMARY KEY (`id_entregador`);
 
 --
+-- Índices para tabela `itens_pedido`
+--
+ALTER TABLE `itens_pedido`
+  ADD KEY `id_pedido` (`id_pedido`),
+  ADD KEY `id_cardapio` (`id_cardapio`);
+
+--
+-- Índices para tabela `notas`
+--
+ALTER TABLE `notas`
+  ADD PRIMARY KEY (`id_cardapio`,`id_usuario`),
+  ADD KEY `id_usuario` (`id_usuario`);
+
+--
 -- Índices para tabela `pedido`
 --
 ALTER TABLE `pedido`
   ADD PRIMARY KEY (`id_pedido`),
-  ADD KEY `pedido_usuario` (`id_usuario`),
-  ADD KEY `pedido_cardapio` (`id_cardapio`),
-  ADD KEY `pedido_entregador` (`id_entregador`);
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_entregador` (`id_entregador`);
 
 --
 -- Índices para tabela `produto_imagem`
@@ -264,7 +290,7 @@ ALTER TABLE `entregador`
 -- AUTO_INCREMENT de tabela `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `produto_imagem`
@@ -289,12 +315,25 @@ ALTER TABLE `cardapio`
   ADD CONSTRAINT `pedido_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Limitadores para a tabela `itens_pedido`
+--
+ALTER TABLE `itens_pedido`
+  ADD CONSTRAINT `itens_pedido_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedido` (`id_pedido`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `itens_pedido_ibfk_2` FOREIGN KEY (`id_cardapio`) REFERENCES `cardapio` (`id_cardapio`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Limitadores para a tabela `notas`
+--
+ALTER TABLE `notas`
+  ADD CONSTRAINT `notas_ibfk_1` FOREIGN KEY (`id_cardapio`) REFERENCES `cardapio` (`id_cardapio`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `notas_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Limitadores para a tabela `pedido`
 --
 ALTER TABLE `pedido`
-  ADD CONSTRAINT `pedido_cardapio` FOREIGN KEY (`id_cardapio`) REFERENCES `cardapio` (`id_cardapio`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `pedido_entregador` FOREIGN KEY (`id_entregador`) REFERENCES `entregador` (`id_entregador`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `pedido_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `pedido_ibfk_2` FOREIGN KEY (`id_entregador`) REFERENCES `entregador` (`id_entregador`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Limitadores para a tabela `produto_imagem`
