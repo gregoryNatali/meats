@@ -213,14 +213,6 @@
 
   </main>
 
-  <script>
-    if (screen.width < 540) {
-      document.querySelectorAll('.destaques-tile')[3].style.backgroundSize = "200%"
-    }
-    if (screen.width < 360) {
-      document.querySelectorAll('.destaques-tile')[3].style.backgroundSize = "300%"
-    }
-  </script>
   <script src="../scripts/dinheiro.js"></script>
   <script>
     const produtos = document.querySelectorAll('.produto-wrapper')

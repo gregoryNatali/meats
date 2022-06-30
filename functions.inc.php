@@ -36,7 +36,7 @@
     function fillMenu($conn, $line) {
         $id_cardapio = $line["id_cardapio"];
         echo "<button class=\"produto-wrapper\" value=" . $line["id_cardapio"] . " name='produto'>
-            <div class=\"produto-img\" style=\"background-image: url(" . loadProductImage($conn, $id_cardapio) . "); background-size: 180%;\"></div>
+            <div class=\"produto-img\" style=\"background-image: url(" . loadProductImage($conn, $id_cardapio) . "); background-size: cover;\"></div>
                 <div class=\"info-cardapio\">
                 <h3>" . $line["nome_produto"] . "</h3>
                 <p>" . $line["descricao_produto"] . "</p>

@@ -56,7 +56,7 @@
 
     border-radius: 10px;
 
-    background-size: 130%;
+    background-size: cover;
     background-position: 50%;
 
     display: flex;
@@ -114,6 +114,10 @@
     width: 100%;
 }
 
+.score svg, .score-first svg {
+    width: 15px;
+}
+
 /* classes para destaques com uma descrição */
 
 .destaques-wrapper-p {
@@ -139,10 +143,6 @@
     padding-bottom: 5px;
 }
 
-.score svg, .score-first svg {
-    width: 15px;
-}
-
 /* primeiro destaque */
 
 .destaques-tile-first {
@@ -159,7 +159,7 @@
 
     border-radius: 10px;
 
-    background-size: 150%;
+    background-size: cover;
     background-position: 50%;
 
     display: flex;

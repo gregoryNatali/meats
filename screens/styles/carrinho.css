@@ -1,12 +1,15 @@
+main {
+  font-family: 'Outfit', sans-serif;
+}
+
 .carrinho {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0 2rem 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-family: 'Outfit', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 500;
@@ -23,13 +26,37 @@
   width: 100%;
 }
 
-.produtos-carrinho {
+.Formas-pagamento {
   display: flex;
   flex-direction: row;
 
   justify-content: space-between;
 
   margin-bottom: 1.5rem;
+  border-bottom: 1px dashed black;
+}
+
+.formas-dentro {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1.25rem;
+}
+
+.formas-dentro h2 {
+  color: #000000;
+
+  font-weight: 500;
+  font-size: 15pt;
+}
+
+.produtos-carrinho {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  margin-bottom: 1.2rem;
   border-bottom: 1px dashed black;
 }
 
@@ -45,14 +72,18 @@
   flex-direction: column;
   align-items: left;
 
-  padding: 0.5rem 0 0.5rem 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .infos-produto h2 {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-  font-size: 15pt;
+  font-weight: 500;
+  font-size: 14pt;
+}
+
+.infos-produto h3 {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 12pt;
 }
 
 .valor-produto {
@@ -65,17 +96,19 @@
 .valor-produto h2 {
   color: #124A15;
 
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.55rem;
 }
 
 .imagem-produto {
   margin-bottom: 1.25rem;
-}
+  width: 150px;
+  height: 150px;
 
-.imagem-produto img {
-  width: 15rem;
+  background-position: 50%;
+  background-size: cover;
+
+  border: 2px solid #88C083;
 }
 
 .valor-pedido {
@@ -83,7 +116,6 @@
 }
 
 .valor-pedido h2 {
-  font-family: 'Outfit', sans-serif;
   font-weight: 400;
   font-size: 1.1669rem;
 
@@ -95,14 +127,27 @@
   align-items: center;
 }
 
+h2 span, .valor-produto h2 {
+  font-weight: 400;
+}
+
+.valor-produto h2 {
+  font-size: 14pt;
+}
+
+.valor-pedido .valor_dinheiro {
+  margin: 0 3px 0 4px;
+}
+
 #continuar {
   display: flex;
   align-items: center;
   justify-content: center;
   
   height: 40px;
-  width: 200px;
-  margin: 30px auto 0 auto;
+  width: 85%;
+  max-width: 300px;
+  margin: 5rem auto 0 auto;
   
   border: none;
   background-color: #236612;
