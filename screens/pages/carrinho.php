@@ -72,6 +72,11 @@
           $pedido = $_SESSION['pedido'];
       }
 
+      if (empty($pedido)) { // previne que o usuário entre nessa tela sem adicionar um produto
+          unset($_SESSION['pedido']);
+          echo '<script>window.location = "index.php"</script>';
+      }
+
       $preco_pedido = 0;
       
       resetCurrentProduct();

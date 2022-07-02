@@ -37,9 +37,14 @@
   <main>
     <?php
 
+        if (!isset($_SESSION['pedido'])) { // previne que o usuário entre nessa tela sem ter um pedido atual
+            echo '<script>window.location = "index.php"</script>';
+        }
+
         $pedido = $_SESSION['pedido'];
         $taxa_entrega = number_format(3, 2);
         $preco_total = number_format($_SESSION['preco_pedido'] + $taxa_entrega, 2);
+        
     ?>
     <!--Título-->
     <div class="carrinho">
@@ -153,7 +158,7 @@
             $sql_pedido = "INSERT INTO `pedido`(`id_usuario`, `custo_pedido`, `troco_usuario`, `concluido`)
             VALUES ($id_usuario, $preco_total, $troco, 0)";
 
-            mysqli_query($conn, $sql_pedido);
+            mysqli_query($conn, $sql_pedido); // insere o pedido no banco
             
             $get_id_sql = "SELECT `id_pedido` FROM `pedido` WHERE `id_usuario` = $id_usuario && `concluido` = 0
             ORDER BY `id_pedido` DESC
@@ -174,7 +179,7 @@
                   VALUES ($id_pedido, $id_cardapio, NULL, $quant)";
                 }
 
-                mysqli_query($conn, $sql_itens_pedido); // insere os itens do pedido na tabela itens_pedido
+                mysqli_query($conn, $sql_itens_pedido); // insere cada item do pedido na tabela itens_pedido
             }
 
             unset($_SESSION['pedido'], $_SESSION['preco_pedido']); // encerra o pedido atual

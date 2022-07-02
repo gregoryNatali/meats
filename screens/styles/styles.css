@@ -21,6 +21,7 @@
 
 main {
     width: 100%;
+    margin-bottom: 20px;
 }
 
 body {
@@ -425,10 +426,10 @@ nav li {
 
 /* Estilos da página de pedidos */
 
-#square {
+#meus-pedidos {
     height: 80px;
     width: 100%;
-    background-color: #F4F9F3;
+    background-color: #E7FFE7;
     margin-top: 20px;
 
     display: flex;
@@ -444,41 +445,85 @@ nav li {
 }
 
 #pac-man {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-
     margin: 10px;
     margin-top: 15vh;
     margin-bottom: 40px;
 }
 
-#pedir-meats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.sem-pedidos {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    font-size: 18pt;
     color: #777777;
 }
 
-#dinheiro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#pedir-meats {
+    font-weight: 700;
+    font-size: 18pt;
+}
 
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bolder;
+#dinheiro {
     font-weight: 400;
     font-size: 11pt;
-    color: #777777;
 
     margin-top: 15px;
     margin-bottom: 70px;
+}
+
+.pedidos {
+    width: 100%;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pedido {
+    width: 75%;
+    max-width: 500px;
+    padding: 25px;
+    margin: 30px 0 0 0;
+    border: 1px solid #737373;
+}
+
+.pedido h2 {
+    margin-bottom: 15px;
+    font-size: 15pt;
+}
+
+.pedido-produtos {
+    display: flex;
+}
+
+.pedido-produtos div {
+    display: block;
+    margin: 0 0 15px 0;
+}
+
+.pedido-produtos b {
+    margin-right: 20px;
+}
+
+.observacao {
+    font-size: 10pt;
+    line-height: 16px;
+
+    color: #666666;
+}
+
+#horario {
+    margin-left: 8px;
+}
+
+.pedido h3 {
+    font-weight: 400;
+    font-size: 13pt;
+}
+
+.linha-pedido {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 15px 0 15px 0;
 }
 
 /* Fim dos estilos da página de pedidos */
