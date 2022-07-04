@@ -18,6 +18,7 @@
 <body>
     <!--Barra de navegação-->
     <?php
+      noEditFallback();
       include('navbar.html');
       myCartButton();
     ?>
@@ -28,7 +29,7 @@
             <div id="adicionar_observacao">
               <label for="input_observacao">
                 <div class="barra_observacao">
-                  <input id="input_observacao" name="editar-observacao" type="text" maxlength="100" placeholder="Digite algo..." required>
+                  <input id="input_observacao" name="editar-observacao" type="text" maxlength="100" placeholder="Digite algo...">
                   <div class="horizontal-line"></div>
                 </div>
                 <p id="input-counter"></p>
@@ -39,7 +40,7 @@
         </form>
     </main>
     <?php
-    
+
       if (isset($_SESSION['pedido'][$_SESSION['editar-produto']]['obs'])) { // caso o usuário tenha botado uma obs antes
         echo "<script>document.querySelector('#input_observacao').value = '" . $_SESSION['pedido'][$_SESSION['editar-produto']]['obs'] . "'</script>";
       }
@@ -55,7 +56,7 @@
       </script>";
 
       if (isset($_POST['editar-observacao'])) { // edita a observação quando o usuário clica no botão
-        $_SESSION['editar-observacao'] = $_POST['editar-observacao'];
+        $_SESSION['editar-observacao'] = trim($_POST['editar-observacao']);
         echo "<script>window.location = 'editar_produto.php'</script>";
       }
 

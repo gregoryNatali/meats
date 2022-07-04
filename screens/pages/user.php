@@ -40,8 +40,8 @@
             ?>
           </h3>
         </div>
-        <form method="post">
-          <button name="logout">
+        <form method="post" style="margin: 5px 5vw 0 0;">
+          <button name="logout" style="border: none; background-color: none;">
             <!--Ícone de saída-->
             <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24.6666 20.0417V16.9583H10.7916V12.3333L3.08325 18.5L10.7916 24.6667V20.0417H24.6666Z" fill="black"/>
@@ -133,7 +133,7 @@
     </main>
 
     <script>
-      let navButton = document.querySelectorAll('nav a')
+      let navButton = document.querySelectorAll('nav #list a')
       navButton[3].innerHTML = `<div>
             <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.5 2.33334C7.28663 2.33334 2.25 7.55651 2.25 14C2.25 20.4435 7.28663 25.6667 13.5 25.6667C19.7134 25.6667 24.75 20.4435 24.75 14C24.75 7.55651 19.7134 2.33334 13.5 2.33334Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

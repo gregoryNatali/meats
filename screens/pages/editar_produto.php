@@ -16,18 +16,22 @@
   <body>
     <!--Barra de navegação-->
     <?php
+      require_once('../../dbconnect.php');
+      
+      if (isset($_POST['produto'])) {
+          $_SESSION['editar-produto'] = $_POST['produto']; // posição do produto a ser editado no carrinho
+      }
+      
+      noEditFallback();
+
       include('navbar.html');
       myCartButton();
+      
     ?>
     <main>
 
         <?php
-            require_once('../../dbconnect.php');
-            
-            if (isset($_POST['produto'])) {
-                $_SESSION['editar-produto'] = $_POST['produto']; // posição do produto a ser editado no carrinho
-            }
-            
+
             $pos_produto_carrinho = $_SESSION['editar-produto'];
             
             if (isset($_POST['remover'])) {
