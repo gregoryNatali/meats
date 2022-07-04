@@ -125,6 +125,15 @@ a {
     font-family: inherit;
 }
 
+#remover {
+    margin-top: 10px;
+    background-color: transparent;
+    border: transparent;
+    color: red;
+    font: inherit;
+    font-size: 11pt;
+}
+
 @media (max-width: 360px) {
     .img-produto {
         background-size: 150%;

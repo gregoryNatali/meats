@@ -55,8 +55,13 @@ main {
   flex-direction: row;
 
   justify-content: space-between;
+  text-align: left;
+  font-family: inherit;
 
+  width: 100%;
+  
   margin-bottom: 1.2rem;
+  border: none;
   border-bottom: 1px dashed black;
 }
 

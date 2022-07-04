@@ -18,6 +18,14 @@
         if (isset($_SESSION['quant'])) {
             unset($_SESSION['quant']);
         }
+
+        if (isset($_SESSION['editar-observacao'])) {
+            unset($_SESSION['editar-observacao']);
+        }
+
+        if (isset($_SESSION['editar-produto'])) {
+            unset($_SESSION['editar-produto']);
+        }
     }
 
     function noProductFallback() { // caso o usuário vá para uma das páginas principais e tenta voltar para a tela de produto/avaliar/obs

@@ -40,7 +40,7 @@
   <?php include('navbar.html'); ?>
   <main>
     <?php
-    
+
       if (!isset($_SESSION['pedido'])) {
           $_SESSION['pedido'] = [];
       }
@@ -99,25 +99,25 @@
     </div>
     <div class="linha-carrinho" style="width: 80%;"></div>
 
-    <form class="cardapio" style="margin-bottom: 20px;" action="produto.php" method="post">
+    <form class="cardapio" style="margin-bottom: 20px;" action="editar_produto.php" method="post">
       
       <?php
 
-          for ($quant_produtos = 0; $quant_produtos < count($pedido); $quant_produtos++) { 
+          for ($quant_produtos = 0; $quant_produtos < count($pedido); $quant_produtos++) {
 
               $sql_carrinho = "SELECT * FROM cardapio WHERE id_cardapio = " . $pedido[$quant_produtos]['id'];
               $resultado_produto = mysqli_fetch_assoc(mysqli_query($conn, $sql_carrinho));
               $preco = number_format($resultado_produto['preco_produto'] * $pedido[$quant_produtos]['quant'], 2);
               $preco_pedido += $preco;
-
-              echo '<div class="produtos-carrinho">
+      
+              echo '<button class="produtos-carrinho" name="produto" value="' . $quant_produtos . '">
       
                   <div class="produtos-carrinho-start">
                     <div class="infos-produto">
                       <h2 style="margin-bottom: 5px;">' . $resultado_produto['nome_produto'] . '</h2>
                       <h2>Quantidade: <span style="margin-left: 5px;">' . $pedido[$quant_produtos]['quant'] . '</span></h2>';
               if ($pedido[$quant_produtos]['obs'] != '') {
-                  echo '<h3>Obs.: <span style="color: rgb(50, 50, 50);">' . $pedido[$quant_produtos]['obs'] . '</span></h3>';
+                  echo '<h3>Obs.: <span style="color: rgb(40, 40, 40); font-weight: 400;">' . $pedido[$quant_produtos]['obs'] . '</span></h3>';
               }
               echo '</div>
           
@@ -133,11 +133,10 @@
                     
                   </div>
           
-              </div>';
+              </button>';
           }
           
           $_SESSION['preco_pedido'] = number_format($preco_pedido, 2);
-
       ?>
 
       </form>
