@@ -1,8 +1,8 @@
 <?php
 
-    $servername = "localhost:3306";
+    $servername = "localhost:3307";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "meats";
 
     // cria a conexão
@@ -12,4 +12,4 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     
-?>
+?> 
