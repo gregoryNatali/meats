@@ -38,9 +38,15 @@ main {
 
 .formas-dentro {
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   margin-bottom: 1.25rem;
+}
+
+.formas-dentro div {
+  width: 100%;
+  display: flex;
 }
 
 .formas-dentro h2 {
@@ -127,7 +133,8 @@ main {
   align-items: center;
 }
 
-h2 span, .valor-produto h2 {
+h2 span,
+.valor-produto h2 {
   font-weight: 400;
 }
 
@@ -143,12 +150,12 @@ h2 span, .valor-produto h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   height: 40px;
   width: 85%;
   max-width: 300px;
   margin: 5rem auto 0 auto;
-  
+
   border: none;
   background-color: #236612;
   color: white;
@@ -161,4 +168,25 @@ h2 span, .valor-produto h2 {
 
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
+}
+
+.pop-up-div {
+  visibility: hidden;
+}
+
+.pop-up-div-show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.botao-troco {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  display: flex;
+  flex-direction: column;
 }
