@@ -118,15 +118,18 @@ a {
 
 .avaliar {
     font-size: 14px;
-    margin: 15px 0 5px 0;
+    margin: 15px 0 25px 0;
     background-color: inherit;
     color: inherit;
     border: none;
     font-family: inherit;
 }
 
-@media (max-width: 360px) {
-    .img-produto {
-        background-size: 150%;
-    }
+#remover {
+    margin: 15px 0 25px 0;
+    background-color: transparent;
+    border: transparent;
+    color: rgb(219, 0, 0);
+    font: inherit;
+    font-size: 11pt;
 }

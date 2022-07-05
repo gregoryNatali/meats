@@ -18,16 +18,18 @@
                 width: 80%;
                 margin: 30px auto 0 7%;
             }
-            #resultados p {
+            #resultados h3 {
                 font-family: 'Poppins', sans-serif;
+                font-weight: 500;
                 font-size: 11pt;
                 margin-bottom: 15px;
+                text-align: left;
             }
             #resultados h2 {
                 font-family: 'Poppins', sans-serif;
-                position: relative;
                 font-size: 12pt;
-                margin-bottom: 10px
+                margin-bottom: 10px;
+                text-align: left;
             }
             button {
                 border: none;
@@ -59,7 +61,11 @@
                 </svg>
             </div>
             <?php
-                $query = $_GET['search'];
+                $query = '';
+                
+                if (isset($_GET['search'])) {
+                    $query = $_GET['search'];
+                }
 
                 echo "<script>document.querySelector('#input_pesquisa').value = '$query'</script>";
 
@@ -73,32 +79,33 @@
             <div id="resultados">
                 <?php
                     $sql_categoria = "SELECT * FROM categoria WHERE nome_categoria LIKE '%$query%' ORDER BY nome_categoria ASC";
-                    $sql_produto = "SELECT * FROM cardapio WHERE nome_produto LIKE '%$query%' ORDER BY nome_produto ASC";
+                    $sql_produto = "SELECT * FROM cardapio WHERE nome_produto LIKE '%$query%' OR descricao_produto LIKE '%$query%' ORDER BY nome_produto ASC";
                     
                     $results_categoria = mysqli_query($conn, $sql_categoria);
                     $results_produto = mysqli_query($conn, $sql_produto);
                     
                     if ($query != '') {
                         if (mysqli_num_rows($results_categoria) > 0) {
-                            echo "<h2>Categorias</h2>";
+                            echo "<form action=\"categoria.php\" method=\"get\"><h2>Categorias</h2>";
                             while($linha = mysqli_fetch_assoc($results_categoria)) { // enquanto tiver resultados, imprima-os no documento
-                                echo "<p>". $linha["nome_categoria"]. "</p>";
+                                echo "<button value=" . $linha["id_categoria"] . " name=\"categoria\"><h3>". $linha["nome_categoria"]. "</h3></button><br>";
                             }
+                            echo "</form>";
                         }
     
                         if (mysqli_num_rows($results_produto) > 0) {
-                            echo "<form action=\"produto.php\" method=\"post\"><h2>Produtos</h2>";
+                            echo "<form action=\"produto.php\" method=\"post\" style=\"margin-bottom: 15vh;\"><h2>Produtos</h2>";
                             while($linha = mysqli_fetch_assoc($results_produto)) { // enquanto tiver resultados, imprima-os no documento
-                                echo "<button value=" . $linha["id_cardapio"] . " name='produto'><p>". $linha["nome_produto"]. "</p></button><br>";
+                                echo "<button value=" . $linha["id_cardapio"] . " name=\"produto\"><h3>". $linha["nome_produto"]. "</h3></button><br>";
                             }
                             echo "</form>";
                         }
     
                         if (mysqli_num_rows($results_categoria) == 0 && mysqli_num_rows($results_produto) == 0) {
-                            echo "<p>Nenhum resultado encontrado</p>";
+                            echo "<h3>Nenhum resultado encontrado</h3>";
                         }
                     } else {
-                        echo "<p>Pesquise algum item ou categoria para ver os resultados!</p>";
+                        echo "<h3>Pesquise algum item ou categoria para ver os resultados!</h3>";
                     }
                     
                 ?>
@@ -108,7 +115,13 @@
         <script>
             const inputBar = document.querySelector('#input_pesquisa')
             inputBar.focus() // mantém o usuário escrevendo
-            inputBar.addEventListener('keydown', () => {
+            inputBar.addEventListener('keydown', (e) => {
+                switch (e.key) {
+                    case 'Escape':
+                    case 'Tab':
+                    case 'Control':
+                        return
+                }
                 setTimeout(() => {
                     document.querySelector('form').submit() // após um tempo do usuário digitar, redireciona para o php
                 }, 2000);

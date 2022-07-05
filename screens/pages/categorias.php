@@ -43,45 +43,50 @@
             </div>
             <!--Grid que separa todos os itens em duas colunas-->
             <!--Cada "tile" é um campo de imagem + texto-->
-            <div id="grid">
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_1.png);">
+            <form id="grid" action="categoria.php" method="get">
+                <button class="tile" value="6" name="categoria" style="background-image: url(../../assets/categorias/categorias_1.png);">
                     Bebidas
-                </div>
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_2.png);">
+                </button>
+                <button class="tile" value="1" name="categoria" style="background-image: url(../../assets/categorias/categorias_2.png);">
                     Hambúrgueres Simples
-                </div>
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_3.png);">
+                </button>
+                <button class="tile" value="3" name="categoria" style="background-image: url(../../assets/categorias/categorias_3.png);">
                     Hambúrgueres Gourmet
-                </div>
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_4.png);">
-                    Hambúrgueres Vegetarianos
-                </div>
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_5.png);">
+                </button>
+                <button class="tile" value="2" name="categoria" style="background-image: url(../../assets/categorias/categorias_4.png);">
+                    Hambúrgueres Veganos
+                </button>
+                <button class="tile" value="4" name="categoria" style="background-image: url(../../assets/categorias/categorias_5.png);">
                     Porções
-                </div>
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_6.png);">
+                </button>
+                <button class="tile" value="5" name="categoria" style="background-image: url(../../assets/categorias/categorias_6.png);">
                     Sobremesa
-                </div>
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_7.png);">
+                </button>
+                <button class="tile" value="7" name="categoria" style="background-image: url(../../assets/categorias/categorias_7.png);">
                     Drinks
-                </div>
-                <div class="tile" style="background-image: url(../../assets/categorias/categorias_8.png);">
+                </button>
+                <button class="tile" value="" name="" style="background-image: url(../../assets/categorias/categorias_8.png);">
                     Refeições Light
-                </div>
-            </div>
-            </div>
+                </button>
+            </form>
         </main>
         <script>
             const inputBar = document.querySelector('#input_pesquisa')
             inputBar.focus() // mantém o usuário escrevendo
-            inputBar.addEventListener('keydown', () => {
+            inputBar.addEventListener('keydown', (e) => {
+                switch (e.key) {
+                    case 'Escape':
+                    case 'Tab':
+                    case 'Control':
+                        return
+                }
                 setTimeout(() => {
                     document.querySelector('form').submit() // após um tempo do usuário digitar, redireciona para o php
                 }, 2000);
             })
         </script>
         <script>
-            let navButton = document.querySelectorAll('nav a')
+            let navButton = document.querySelectorAll('nav #list a')
             navButton[1].innerHTML = `<div>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24.5 24.5L19.2664 19.257L24.5 24.5ZM22.1667 12.25C22.1667 14.8801 21.1219 17.4024 19.2622 19.2622C17.4024 21.1219 14.8801 22.1667 12.25 22.1667C9.61998 22.1667 7.09763 21.1219 5.2379 19.2622C3.37816 17.4024 2.33337 14.8801 2.33337 12.25C2.33337 9.61995 3.37816 7.0976 5.2379 5.23787C7.09763 3.37813 9.61998 2.33334 12.25 2.33334C14.8801 2.33334 17.4024 3.37813 19.2622 5.23787C21.1219 7.0976 22.1667 9.61995 22.1667 12.25V12.25Z" stroke="black" stroke-width="2" stroke-linecap="round"/>

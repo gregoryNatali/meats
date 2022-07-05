@@ -7,11 +7,3 @@ inputObs.addEventListener('keyup', () => {
     
     counter.textContent = 100 - observacao.length
 })
-
-submitButton.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    if (inputObs.value.length > 0) {
-        document.querySelector('form').submit()
-    }
-})

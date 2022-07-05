@@ -53,9 +53,9 @@
     </div>
     <div class="linha-destaques"></div>
 
-    <div id="destaques-grid">
+    <form id="destaques-grid" action="produto.php" method="post">
       <div class="flex">
-        <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_1.png); width: 63%; margin-right: 9px;">
+        <button class="destaques-tile" value="12" name="produto" style="background-image: url(../../assets/destaques/destaques_1.png); width: 63%; margin-right: 9px;">
           <div class="destaques-wrapper-p" style="justify-content: start;">
             <div class="conteudo-info-first">
               <span>Steak Power</span>
@@ -68,8 +68,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_2.jpg); width: 37%; margin-left: 9px;">
+        </button>
+        <button class="destaques-tile" value="11" name="produto" style="background-image: url(../../assets/destaques/destaques_2.jpg); width: 37%; margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Pepsi Lata</span>
@@ -81,9 +81,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </button>
       </div>
-      <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_3.jpg);">
+      <button class="destaques-tile" value="" name="" style="background-image: url(../../assets/destaques/destaques_3.jpg);">
         <div class="destaques-wrapper-p">
           <div class="destaques-conteudo-p">
             <span>Hambúrguer Gourmet</span>
@@ -96,9 +96,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </button>
       <div class="flex">
-        <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_4.jpg); width: 40%; margin-right: 9px;">
+        <button class="destaques-tile" value="9" name="produto" style="background-image: url(../../assets/destaques/destaques_4.jpg); width: 40%; margin-right: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Drink de Morango</span>
@@ -110,8 +110,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_5.png); width: 60%; margin-left: 9px;">
+        </button>
+        <button class="destaques-tile" value="3" name="produto" style="background-image: url(../../assets/destaques/destaques_5.jpg); width: 60%; margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Hambúrguer Veggie</span>
@@ -123,10 +123,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </button>
       </div>
       <div class="flex">
-        <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_6.png); margin-right: 9px;">
+        <button class="destaques-tile" value="" name="" style="background-image: url(../../assets/destaques/destaques_6.png); margin-right: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Baconburger Simples</span>
@@ -138,8 +138,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_7.jpg); margin-left: 9px;">
+        </button>
+        <button class="destaques-tile" value="13" name="produto" style="background-image: url(../../assets/destaques/destaques_7.jpg); margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Chicken Dream</span>
@@ -151,9 +151,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </button>
       </div>
-      <div class="destaques-tile" style="background-image: url(../../assets/destaques/destaques_8.png);">
+      <button class="destaques-tile" value="10" name="produto" style="background-image: url(../../assets/destaques/destaques_8.png);">
         <div class="destaques-wrapper">
           <div class="destaques-conteudo">
             <span>Porção de Camarão e Fritas</span>
@@ -165,8 +165,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </button>
+  </form>
   </main>
 
   <script>
