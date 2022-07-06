@@ -56,7 +56,7 @@
 
             $id_cardapio = $produto['id'];
             
-            $sql_produto = "SELECT nome_produto, preco_produto, descricao_produto, peso_produto, nome_categoria FROM `cardapio` 
+            $sql_produto = "SELECT id_cardapio, nome_produto, preco_produto, descricao_produto, peso_produto, categoria.id_categoria, nome_categoria FROM `cardapio` 
             INNER JOIN categoria ON cardapio.id_categoria = categoria.id_categoria
             WHERE id_cardapio = $id_cardapio";
 

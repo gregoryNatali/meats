@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Tempo de geração: 30-Jun-2022 às 22:07
+-- Tempo de geração: 06-Jul-2022 às 23:34
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -42,19 +42,42 @@ CREATE TABLE `cardapio` (
 --
 
 INSERT INTO `cardapio` (`id_cardapio`, `nome_produto`, `preco_produto`, `descricao_produto`, `peso_produto`, `id_categoria`, `e_destaque`) VALUES
-(1, 'Hambúrguer ', 7.99, 'Pão, hambúrguer e picles com ketchup e mostarda', 90, 1, 0),
-(2, 'Hambúrguer Duplo', 12.99, 'Dois pães, dois hambúrgueres, picles e condimentos', 150, 1, 0),
-(3, 'Hambúrguer Veggie', 15.99, 'Pão vegano e hambúrguer feito de proteína de soja', 90, 2, 1),
-(4, 'Batata Frita', 5.99, 'Deliciosas batatas selecionadas, fritas e crocantes', 400, 4, 0),
+(1, 'X-Burguer', 7.99, 'Pão, hambúrguer, tomate, alface, picles, ketchup e mostarda', 120, 1, 0),
+(2, 'Hambúrguer Duplo', 12.99, 'Dois pães, dois hambúrgueres, picles e condimentos', 160, 1, 0),
+(3, 'Hambúrguer Veggie', 12.99, 'Pão vegano e hambúrguer feito de proteína de soja', 120, 2, 1),
+(4, 'Batata Frita', 22.99, 'Deliciosas batatas selecionadas, macias e crocantes', 400, 4, 0),
 (5, 'Água Mineral', 2.99, 'Água sem gás', 500, 6, 0),
-(6, 'Sundae ', 8.99, 'Sorvete de baunilha com cobertura de chocolate ', 200, 5, 0),
-(7, 'Casquinha', 3.99, 'Sorvete de baunilha em uma casquinha crocante', 90, 5, 0),
+(6, 'Sundae ', 6.99, 'Sorvete de baunilha com cobertura de chocolate ', 100, 5, 0),
+(7, 'Picolé de Chocolate', 4.99, 'Picolé de chocolate', 80, 5, 0),
 (8, 'Hambúrguer com Queijo Triplo', 14.99, 'Um hambúrguer (100% carne bovina), queijo cheddar', 200, 3, 0),
-(9, 'Drink de morango', 16.99, 'Vodka, pedras de gelo, leite condensado e morango', 500, 7, 1),
-(10, 'Porção de camarão e fritas', 39.99, '250g de batata e 250g de camarão', 500, 4, 1),
+(9, 'Suco de Abacaxi com Hortelã', 6.99, 'Suco de abacaxi com hortelã gelado da polpa <br>(Este produto é entregue em uma garrafa)', 500, 6, 0),
+(10, 'Porção de Camarão e Fritas', 34.99, '250g de batata e 250g de camarão', 500, 4, 1),
 (11, 'Pepsi Lata', 5.99, 'Uma lata de Pepsi ', 350, 6, 1),
-(12, 'Steak Power com Fritas e Onion Rings', 19.99, 'Hambúrguer gormet acompanhado por batatas e onion rings', 500, 3, 1),
-(13, 'Chicken Dream', 13.99, 'Hambúrguer de frango  ', 400, 1, 1);
+(12, 'Steak Power com Fritas e Onion Rings', 23.99, 'Hambúrguer gourmet acompanhado por batata frita e onion rings', 320, 3, 1),
+(13, 'Chicken Dream', 13.99, 'Pão com gergelim, hambúrguer de frango, queijo, alface, tomate e cebola', 140, 1, 1),
+(14, 'Hambúrguer Gourmet com Fritas', 24.99, 'Hambúrguer de carne 100% bovina, picles, alface de alta qualidade e molho especial com uma porção de fritas', 290, 3, 1),
+(15, 'Sanduíche Light', 15.99, 'Pão de forma integral, fatias de tomate, folhas de alface e um creme de frango.', 140, 8, 0),
+(16, 'Baconburger Simples', 12.99, 'Pão, hambúrguer, fatias de bacon e queijo cheddar', 110, 1, 1),
+(17, 'Mini Hambúrgueres ', 7.99, 'Três hambúrgueres de frango pequeninhos e fofinhos', 130, 1, 0),
+(18, 'Mini Hambúrgueres Veganos', 8.99, 'Três hambúrgueres veganos pequeninhos e fofinhos', 130, 2, 0),
+(19, 'Hambúrguer com Repolho Roxo', 18.99, 'Hambúrguer de soja com repolho roxo', 210, 2, 0),
+(20, 'Hambúrguer com Cebola Caramelizada', 24.99, 'Hambúrguer de carne 100% bovina, picles e alface de alta qualidade, molho especial e cebola caramelizada', 220, 3, 0),
+(21, 'Hambúrguer Australiano ', 23.99, 'Hambúrguer de carne 100% bovina, pão australiano, picles, alface de alta qualidade e molho especial', 220, 3, 0),
+(22, 'Poção de Camarão à Milanesa', 38.99, '500 gramas de camarão à milanesa', 500, 4, 0),
+(23, 'Porção de Batata Rústica', 26.99, 'Batata assada no ponto coberta com uma camada fina de azeite de oliva e especiarias', 400, 4, 0),
+(24, 'Porção de Peixe Frito à Milanesa', 32.99, 'Tilápia e bacalhau fritos à milanesa', 500, 4, 0),
+(25, 'Mousse de Morango', 2.99, 'Mousse feito com morango, leite condensado, gelatina e creme de leite', 40, 5, 0),
+(26, 'Milkshake de Chocolate', 10.99, 'Milkshake de chocolate com pedaços de biscoito', 400, 5, 0),
+(27, 'Coca-Cola - 600ml', 6.99, 'Garrafa de Coca-Cola', 600, 6, 0),
+(28, 'Guaraná - 2L', 9.99, 'Garrafa de Guaraná Antarctica', 2000, 6, 0),
+(29, 'Suco de Laranja', 7.99, 'Suco de laranja gelado natural <br>(Este produto é entregue em uma garrafa)', 450, 6, 0),
+(30, 'Suco de Morango', 7.99, 'Suco de morango gelado natural <br>(Este produto é entregue em uma garrafa)', 450, 6, 0),
+(31, 'Schweppes Citrus Lata', 5.99, 'Uma lata de Schweppes Citrus', 350, 6, 0),
+(32, 'Strogonoff de Frango', 23.49, 'Arroz, batata palha e strogonoff de frango com champignon', 450, 7, 1),
+(33, 'Bolinhos de Chuchu', 11.99, 'Bolinhos saudáveis de chuchu assados', 140, 8, 0),
+(34, 'Executivo de Churrasco', 24.99, 'Arroz, batata frita, feijão, farofa e carne de churrasco', 480, 7, 0),
+(35, 'Executivo de Frango Grelhado', 21.99, 'Arroz, batata frita, salada, farofa e frango grelhado', 450, 7, 0),
+(36, 'Macarrão com Almôndegas', 24.99, 'Macarrão com molho de tomate e almôndegas feitas de carne moída e condimentos', 460, 7, 0);
 
 -- --------------------------------------------------------
 
@@ -78,7 +101,8 @@ INSERT INTO `categoria` (`id_categoria`, `nome_categoria`) VALUES
 (4, 'Porções'),
 (5, 'Sobremesa'),
 (6, 'Bebidas'),
-(7, 'Drinks');
+(7, 'Almoços'),
+(8, 'Refeições Lights');
 
 -- --------------------------------------------------------
 
@@ -131,7 +155,8 @@ INSERT INTO `itens_pedido` (`id_item_pedido`, `id_pedido`, `id_cardapio`, `obser
 (7, 3, 1, NULL, 1),
 (8, 3, 5, NULL, 1),
 (9, 4, 13, NULL, 1),
-(10, 4, 9, 'Quero pouco gelo na bebida', 1);
+(10, 4, 9, 'Quero pouco gelo na bebida', 1),
+(11, 5, 3, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -170,7 +195,8 @@ INSERT INTO `pedido` (`id_pedido`, `id_usuario`, `custo_pedido`, `troco_usuario`
 (1, 6, 46.95, 100, NULL, 0, '2022-06-30 19:55:00', NULL),
 (2, 7, 34.98, 100, NULL, 0, '2022-06-30 19:56:41', NULL),
 (3, 3, 21.97, 100, NULL, 0, '2022-06-30 19:59:50', NULL),
-(4, 3, 33.98, 100, NULL, 0, '2022-06-30 20:02:30', NULL);
+(4, 3, 33.98, 100, NULL, 0, '2022-06-30 20:02:30', NULL),
+(5, 6, 18.99, 18.99, NULL, 0, '2022-07-06 19:00:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -200,7 +226,30 @@ INSERT INTO `produto_imagem` (`id_produto`, `imagem`) VALUES
 (10, '../../assets/cardapio/10.png'),
 (11, '../../assets/cardapio/11.jpg'),
 (12, '../../assets/cardapio/12.png'),
-(13, '../../assets/cardapio/13.jpg');
+(13, '../../assets/cardapio/13.jpg'),
+(14, '../../assets/cardapio/14.jpg'),
+(15, '../../assets/cardapio/15.jpg'),
+(16, '../../assets/cardapio/16.png'),
+(17, '../../assets/cardapio/17.jpg'),
+(18, '../../assets/cardapio/18.jpg'),
+(19, '../../assets/cardapio/19.jpg'),
+(20, '../../assets/cardapio/20.jpg'),
+(21, '../../assets/cardapio/21.jpg'),
+(22, '../../assets/cardapio/22.jpg'),
+(23, '../../assets/cardapio/23.jpg'),
+(24, '../../assets/cardapio/24.jpg'),
+(25, '../../assets/cardapio/25.jpeg'),
+(26, '../../assets/cardapio/26.jpg'),
+(27, '../../assets/cardapio/27.jpg'),
+(28, '../../assets/cardapio/28.jpg'),
+(29, '../../assets/cardapio/29.jpg'),
+(30, '../../assets/cardapio/30.jpg'),
+(31, '../../assets/cardapio/31.jpg'),
+(32, '../../assets/cardapio/32.jpg'),
+(33, '../../assets/cardapio/33.jpg'),
+(34, ' ../../assets/cardapio/34.jpg'),
+(35, ' ../../assets/cardapio/35.jpg'),
+(36, ' ../../assets/cardapio/36.jpg');
 
 -- --------------------------------------------------------
 
@@ -300,13 +349,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `cardapio`
 --
 ALTER TABLE `cardapio`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de tabela `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `entregador`
@@ -318,19 +367,19 @@ ALTER TABLE `entregador`
 -- AUTO_INCREMENT de tabela `itens_pedido`
 --
 ALTER TABLE `itens_pedido`
-  MODIFY `id_item_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_item_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `produto_imagem`
 --
 ALTER TABLE `produto_imagem`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`

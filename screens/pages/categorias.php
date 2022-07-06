@@ -43,29 +43,29 @@
             </div>
             <!--Grid que separa todos os itens em duas colunas-->
             <!--Cada "tile" é um campo de imagem + texto-->
-            <form id="grid" action="categoria.php" method="get">
-                <button class="tile" value="6" name="categoria" style="background-image: url(../../assets/categorias/categorias_1.png);">
-                    Bebidas
-                </button>
-                <button class="tile" value="1" name="categoria" style="background-image: url(../../assets/categorias/categorias_2.png);">
+            <form id="grid" action="resultados_categoria.php" method="get">
+                <button class="tile" value="1" name="categoria" style="background-image: url(../../assets/categorias/categorias_1.jpg);">
                     Hambúrgueres Simples
                 </button>
-                <button class="tile" value="3" name="categoria" style="background-image: url(../../assets/categorias/categorias_3.png);">
-                    Hambúrgueres Gourmet
-                </button>
-                <button class="tile" value="2" name="categoria" style="background-image: url(../../assets/categorias/categorias_4.png);">
+                <button class="tile" value="2" name="categoria" style="background-image: url(../../assets/categorias/categorias_2.jpg);">
                     Hambúrgueres Veganos
                 </button>
-                <button class="tile" value="4" name="categoria" style="background-image: url(../../assets/categorias/categorias_5.png);">
+                <button class="tile" value="3" name="categoria" style="background-image: url(../../assets/categorias/categorias_3.jpg);">
+                    Hambúrgueres Gourmet
+                </button>
+                <button class="tile" value="4" name="categoria" style="background-image: url(../../assets/categorias/categorias_4.jpg);">
                     Porções
                 </button>
-                <button class="tile" value="5" name="categoria" style="background-image: url(../../assets/categorias/categorias_6.png);">
+                <button class="tile" value="5" name="categoria" style="background-image: url(../../assets/categorias/categorias_5.jpg);">
                     Sobremesa
                 </button>
-                <button class="tile" value="7" name="categoria" style="background-image: url(../../assets/categorias/categorias_7.png);">
-                    Drinks
+                <button class="tile" value="6" name="categoria" style="background-image: url(../../assets/categorias/categorias_6.jpg);">
+                    Bebidas
                 </button>
-                <button class="tile" value="" name="" style="background-image: url(../../assets/categorias/categorias_8.png);">
+                <button class="tile" value="7" name="categoria" style="background-image: url(../../assets/categorias/categorias_7.jfif);">
+                    Almoços
+                </button>
+                <button class="tile" value="8" name="categoria" style="background-image: url(../../assets/categorias/categorias_8.jpg);">
                     Refeições Light
                 </button>
             </form>

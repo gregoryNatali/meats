@@ -55,7 +55,7 @@
 
     <form id="destaques-grid" action="produto.php" method="post">
       <div class="flex">
-        <button class="destaques-tile" value="12" name="produto" style="background-image: url(../../assets/destaques/destaques_1.png); width: 63%; margin-right: 9px;">
+        <button class="destaques-tile" value="12" name="produto" style="background-image: url(../../assets/cardapio/12.png); width: 63%; margin-right: 9px;">
           <div class="destaques-wrapper-p" style="justify-content: start;">
             <div class="conteudo-info-first">
               <span>Steak Power</span>
@@ -69,10 +69,10 @@
             </div>
           </div>
         </button>
-        <button class="destaques-tile" value="11" name="produto" style="background-image: url(../../assets/destaques/destaques_2.jpg); width: 37%; margin-left: 9px;">
+        <button class="destaques-tile" value="26" name="produto" style="background-image: url(../../assets/cardapio/26.jpg); width: 37%; margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
-              <span>Pepsi Lata</span>
+              <span>Milkshake de Chocolate</span>
               <div class="score">
                 <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
@@ -83,7 +83,7 @@
           </div>
         </button>
       </div>
-      <button class="destaques-tile" value="" name="" style="background-image: url(../../assets/destaques/destaques_3.jpg);">
+      <button class="destaques-tile" value="14" name="produto" style="background-image: url(../../assets/cardapio/14.jpg);">
         <div class="destaques-wrapper-p">
           <div class="destaques-conteudo-p">
             <span>Hambúrguer Gourmet</span>
@@ -98,10 +98,10 @@
         </div>
       </button>
       <div class="flex">
-        <button class="destaques-tile" value="9" name="produto" style="background-image: url(../../assets/destaques/destaques_4.jpg); width: 40%; margin-right: 9px;">
+        <button class="destaques-tile" value="32" name="produto" style="background-image: url(../../assets/cardapio/32.jpg); width: 40%; margin-right: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
-              <span>Drink de Morango</span>
+              <span>Strogonoff de Frango</span>
               <div class="score">
                 <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
@@ -111,7 +111,7 @@
             </div>
           </div>
         </button>
-        <button class="destaques-tile" value="3" name="produto" style="background-image: url(../../assets/destaques/destaques_5.jpg); width: 60%; margin-left: 9px;">
+        <button class="destaques-tile" value="3" name="produto" style="background-image: url(../../assets/cardapio/3.jpg); width: 60%; margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Hambúrguer Veggie</span>
@@ -126,7 +126,7 @@
         </button>
       </div>
       <div class="flex">
-        <button class="destaques-tile" value="" name="" style="background-image: url(../../assets/destaques/destaques_6.png); margin-right: 9px;">
+        <button class="destaques-tile" value="16" name="produto" style="background-image: url(../../assets/cardapio/16.png); margin-right: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Baconburger Simples</span>
@@ -139,7 +139,7 @@
             </div>
           </div>
         </button>
-        <button class="destaques-tile" value="13" name="produto" style="background-image: url(../../assets/destaques/destaques_7.jpg); margin-left: 9px;">
+        <button class="destaques-tile" value="13" name="produto" style="background-image: url(../../assets/cardapio/13.jpg); margin-left: 9px;">
           <div class="destaques-wrapper">
             <div class="destaques-conteudo">
               <span>Chicken Dream</span>
@@ -153,7 +153,7 @@
           </div>
         </button>
       </div>
-      <button class="destaques-tile" value="10" name="produto" style="background-image: url(../../assets/destaques/destaques_8.png);">
+      <button class="destaques-tile" value="10" name="produto" style="background-image: url(../../assets/cardapio/10.png);">
         <div class="destaques-wrapper">
           <div class="destaques-conteudo">
             <span>Porção de Camarão e Fritas</span>

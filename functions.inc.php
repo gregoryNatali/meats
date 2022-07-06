@@ -86,7 +86,13 @@
     function fillProduct($line) {
         echo '<h1>' . $line['nome_produto'] . '</h1>
               <p>' . $line['descricao_produto'] . '</p>
-              <p><b>Peso: </b>' . $line['peso_produto'] . 'g</p>
+              <p><b>Peso: </b>' . $line['peso_produto'];
+              if ($line['id_categoria'] == 6 || $line['id_cardapio'] == 26) {
+                echo 'ml';
+              } else {
+                echo 'g';
+              }
+        echo '</p>
               <p><b>Categoria: </b>' . $line['nome_categoria'] . '</p>
               <b>Classificação</b>
               <div class="classificacao">    

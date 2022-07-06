@@ -162,12 +162,14 @@
             </svg>
           </h2>
         </div>
-        <button id="continuar">
-          <span>Continuar</span>
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 5H5V17H3V5ZM13 10H7V12H13V17L19 11L13 5V10Z" fill="white"/>
-          </svg>
-        </button>
+        <div style="margin-top: 5rem; display: flex; flex-direction: column; align-items: center;">
+          <button id="continuar">
+            <span>Continuar</span>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 5H5V17H3V5ZM13 10H7V12H13V17L19 11L13 5V10Z" fill="white"/>
+            </svg>
+          </button>
+        </div>
 
       </form>
 

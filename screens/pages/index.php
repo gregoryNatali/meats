@@ -28,6 +28,7 @@
         width: 100%;
     }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -58,78 +59,78 @@
 
     
     <form id="destaques-grid" action="produto.php" method="post">
-    <div class="flex">
-        <button class="destaques-tile" value="12" name="produto" style="background-image: url(../../assets/destaques/destaques_1.png); width: 63%; margin-right: 9px;">
-          <div class="destaques-wrapper-p" style="justify-content: start;">
-            <div class="conteudo-info-first">
-              <span>Steak Power</span>
-              <p>Com fritas e onion rings</p>
-              <div class="score-first">
-                <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
-                </svg>
-                <p>4.6</p>
+        <div class="flex">
+          <button class="destaques-tile" value="12" name="produto" style="background-image: url(../../assets/cardapio/12.png); width: 63%; margin-right: 9px;">
+            <div class="destaques-wrapper-p" style="justify-content: start;">
+              <div class="conteudo-info-first">
+                <span>Steak Power</span>
+                <p>Com fritas e onion rings</p>
+                <div class="score-first">
+                  <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
+                  </svg>
+                  <p>4.6</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-        <button class="destaques-tile" value="11" name="produto" style="background-image: url(../../assets/destaques/destaques_2.jpg); width: 37%; margin-left: 9px;">
-          <div class="destaques-wrapper">
-            <div class="destaques-conteudo">
-              <span>Pepsi Lata</span>
-              <div class="score">
-                <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
-                </svg>
-                <p>4.5</p>
+          </button>
+          <button class="destaques-tile" value="26" name="produto" style="background-image: url(../../assets/cardapio/26.jpg); width: 37%; margin-left: 9px;">
+            <div class="destaques-wrapper">
+              <div class="destaques-conteudo">
+                <span>Milkshake de Chocolate</span>
+                <div class="score">
+                  <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
+                  </svg>
+                  <p>4.5</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-      </div>
-      <button class="destaques-tile" value="" name="" style="background-image: url(../../assets/destaques/destaques_3.jpg);">
-        <div class="destaques-wrapper-p">
-          <div class="destaques-conteudo-p">
-            <span>Hambúrguer Gourmet</span>
-            <p>Especial com fritas</p>
-            <div class="score">
-              <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
-              </svg>
-              <p>4.9</p>
-            </div>
-          </div>
+          </button>
         </div>
-      </button>
-      <div class="flex">
-        <button class="destaques-tile" value="9" name="produto" style="background-image: url(../../assets/destaques/destaques_4.jpg); width: 40%; margin-right: 9px;">
-          <div class="destaques-wrapper">
-            <div class="destaques-conteudo">
-              <span>Drink de Morango</span>
+        <button class="destaques-tile" value="14" name="produto" style="background-image: url(../../assets/cardapio/14.jpg);">
+          <div class="destaques-wrapper-p">
+            <div class="destaques-conteudo-p">
+              <span>Hambúrguer Gourmet</span>
+              <p>Especial com fritas</p>
               <div class="score">
                 <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
                 </svg>
-                <p>4.7</p>
+                <p>4.9</p>
               </div>
             </div>
           </div>
         </button>
-        <button class="destaques-tile" value="3" name="produto" style="background-image: url(../../assets/destaques/destaques_5.jpg); width: 60%; margin-left: 9px;">
-          <div class="destaques-wrapper">
-            <div class="destaques-conteudo">
-              <span>Hambúrguer Veggie</span>
-              <div class="score">
-                <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
-                </svg>
-                <p>4.5</p>
+        <div class="flex">
+          <button class="destaques-tile" value="32" name="produto" style="background-image: url(../../assets/cardapio/32.jpg); width: 40%; margin-right: 9px;">
+            <div class="destaques-wrapper">
+              <div class="destaques-conteudo">
+                <span>Strogonoff de Frango</span>
+                <div class="score">
+                  <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
+                  </svg>
+                  <p>4.7</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-      </div>
-  </form>
+          </button>
+          <button class="destaques-tile" value="3" name="produto" style="background-image: url(../../assets/cardapio/3.jpg); width: 60%; margin-left: 9px;">
+            <div class="destaques-wrapper">
+              <div class="destaques-conteudo">
+                <span>Hambúrguer Veggie</span>
+                <div class="score">
+                  <svg class="star" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0759 4.86201L9.86075 4.24941L7.97647 0.429395C7.92501 0.324805 7.84034 0.240137 7.73575 0.188672C7.47345 0.0591797 7.1547 0.16709 7.02354 0.429395L5.13927 4.24941L0.924129 4.86201C0.807918 4.87861 0.701668 4.9334 0.620321 5.01641C0.521976 5.11749 0.467783 5.25348 0.469651 5.39449C0.471519 5.53551 0.529294 5.67002 0.630282 5.76846L3.67999 8.7418L2.95948 12.9403C2.94258 13.038 2.95339 13.1384 2.99068 13.2303C3.02796 13.3221 3.09024 13.4017 3.17043 13.4599C3.25063 13.5182 3.34555 13.5528 3.44441 13.5598C3.54328 13.5669 3.64214 13.5461 3.72979 13.4998L7.50001 11.5176L11.2702 13.4998C11.3732 13.5546 11.4927 13.5729 11.6072 13.5529C11.8961 13.5031 12.0903 13.2292 12.0405 12.9403L11.32 8.7418L14.3697 5.76846C14.4527 5.68711 14.5075 5.58086 14.5241 5.46465C14.569 5.17412 14.3664 4.90518 14.0759 4.86201Z" fill="#D79B00"/>
+                  </svg>
+                  <p>4.5</p>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+    </form>
 
     <a href="destaques.php" id="ver-destaques">
       <span>Ver mais destaques</span>
@@ -139,7 +140,7 @@
     </a>
     <div style="height: 1px; background-color: black; width: 90px; margin: 0 auto 0 auto;"></div>
 
-    <form class="cardapio" action="produto.php" method="post">
+    <form class="cardapio" style="user-select: none;" action="produto.php" method="post">
       
         <section>
             <div class="titulo-cardapio">
@@ -152,7 +153,30 @@
                 <div class="produtos">
                     <?php
                         $sql_lanches = "SELECT id_cardapio, nome_produto, descricao_produto, preco_produto FROM `cardapio`
-                        WHERE id_categoria = 1 OR id_categoria = 2 OR id_categoria = 3 OR id_categoria = 4
+                        WHERE id_categoria = 1 OR id_categoria = 2 OR id_categoria = 3 OR id_categoria = 4 OR id_categoria = 8
+                        ORDER BY id_categoria, nome_produto ASC";
+                        $lanches = mysqli_query($conn, $sql_lanches);
+                        
+                        while ($linha_lanche = mysqli_fetch_assoc($lanches)) {
+                            # inserindo cada produto do cardápio e suas informações
+                            fillMenu($conn, $linha_lanche);
+                        }
+                    ?>
+            </div>
+        </section>
+      
+        <section>
+            <div class="titulo-cardapio">
+                <h2>Almoço</h2>
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.6562 16.8C22.6562 11.4626 18.5178 7.07373 13.2812 6.67349V3.90625H11.7188V6.67349C6.48218 7.07388 2.34375 11.4626 2.34375 16.8V18.4165H22.6562V16.8ZM21.0938 16.854H3.90625V16.8C3.90625 12.0614 7.76138 8.2062 12.5 8.2062C17.2386 8.2062 21.0938 12.0613 21.0938 16.8V16.854ZM0.78125 20.3125H24.2188V21.875H0.78125V20.3125Z" fill="black"/>
+                </svg>
+                </div>
+
+                <div class="produtos">
+                    <?php
+                        $sql_lanches = "SELECT id_cardapio, nome_produto, descricao_produto, preco_produto FROM `cardapio`
+                        WHERE id_categoria = 7
                         ORDER BY id_categoria, nome_produto ASC";
                         $lanches = mysqli_query($conn, $sql_lanches);
                         
@@ -175,7 +199,7 @@
             <div class="produtos">
                   <?php
                       $sql_bebidas = "SELECT id_cardapio, nome_produto, descricao_produto, preco_produto FROM `cardapio`
-                      WHERE id_categoria = 6 OR id_categoria = 7
+                      WHERE id_categoria = 6
                       ORDER BY id_categoria, nome_produto ASC";
                       $bebidas = mysqli_query($conn, $sql_bebidas);
                       
@@ -213,17 +237,8 @@
     </form>
 
   </main>
-
+  <script src="../scripts/index.js"></script>
   <script src="../scripts/dinheiro.js"></script>
-  <script>
-    const produtos = document.querySelectorAll('.produto-wrapper')
-    
-    for (let index = 0; index < produtos.length; index++) {
-        produtos[index].addEventListener('click', () => {
-            document.querySelector('form').submit()
-        })
-    }
-  </script>
   <script>
     let navButton = document.querySelectorAll('nav #list a')
     navButton[0].innerHTML = `<div>

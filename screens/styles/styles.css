@@ -177,7 +177,7 @@ nav li {
     align-items: center;
 }
 
-#google-login {
+/* #google-login {
     width: 70vw;
     max-width: 350px;
     height: 60px;
@@ -198,7 +198,7 @@ nav li {
 #google-login span {
     float: right;
     margin-right: 20px;
-}
+} */
 
 #sign-up {
     width: 70vw;
@@ -420,6 +420,8 @@ nav li {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-shadow: inset 0px 4px 4px 100px rgba(0, 0, 0, 0.35);
 }
 
 /* Fim dos estilos da página de categorias */
@@ -555,6 +557,12 @@ nav li {
     align-items: center;
 }
 
+.top-bar h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
 /* Conteúdo principal */
 
 #user-body main {
@@ -584,14 +592,9 @@ nav li {
     padding: 0 10.07% 0 8.07%;
 }
 
-.top-bar h3 {
-    font-size: 32px;
-    font-weight: 500;
-    margin-left: 20px;
-}
 
 .user-settings h4 {
-    font-size: 27px;
+    font-size: 26px;
     margin: 0;
     font-family: 'Pavanam';
     font-weight: 400;

@@ -86,7 +86,7 @@
                     
                     if ($query != '') {
                         if (mysqli_num_rows($results_categoria) > 0) {
-                            echo "<form action=\"categoria.php\" method=\"get\"><h2>Categorias</h2>";
+                            echo "<form action=\"resultados_categoria.php\" method=\"get\"><h2>Categorias</h2>";
                             while($linha = mysqli_fetch_assoc($results_categoria)) { // enquanto tiver resultados, imprima-os no documento
                                 echo "<button value=" . $linha["id_categoria"] . " name=\"categoria\"><h3>". $linha["nome_categoria"]. "</h3></button><br>";
                             }
