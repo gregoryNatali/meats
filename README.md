@@ -1,7 +1,7 @@
 # MEATS
 
-Meats é um aplicativo de comida para uma empresa fictícia. As páginas estão localizadas em screens/pages.
+Meats is a food delivery app made for a fictitious company. The pages are at screens/pages.
 
-* assets: Recursos do aplicativo (imagens)
-* database: SQL do banco de dados
-* screens: Telas do aplicativo (HTML, CSS, JavaScript e PHP)
+* assets: App resources (images)
+* database: database .SQL file
+* screens: App screens (HTML, CSS, JavaScript and PHP)
